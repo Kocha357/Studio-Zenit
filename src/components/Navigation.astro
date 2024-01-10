@@ -1,0 +1,41 @@
+<nav>
+	<div class="links-wrapper">
+		<a href="">Početna</a>
+		<a href="">O nama</a>
+		<a href="">Usluge</a>
+		<a href="">Galerija</a>
+		<a href="">Albumi</a>
+		<a href="">Kontakt</a>
+	</div>
+</nav>
+<style>
+	nav {
+		height: 100px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 99999;
+	}
+	.links-wrapper {
+		padding: 0 40px;
+		display: flex;
+		gap: 40px;
+	}
+	.links-wrapper a {
+		text-decoration: none;
+		outline: none;
+		color: rgb(255 255 255 / 58%);
+		font-size: 20px;
+		text-transform: uppercase;
+		font-family: "Courier New", Courier, monospace;
+		cursor: pointer;
+		word-break: keep-all;
+		white-space: nowrap;
+	}
+	.links-wrapper a:hover {
+		color: rgb(255 255 255);
+	}
+</style>

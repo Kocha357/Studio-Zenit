@@ -1,79 +1,64 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Navigation from "../components/Navigation.astro";
 ---
 
-<Layout title="Foto studio Zenit">
-	<main>
-		<h1>Website u pripremi!</h1>
-		<p class="instructions">
-			Dragi korisnici, Spremamo se za veliko iznenađenje - naš novi sajt je u izradi! Radimo punom parom kako bismo vam pripremili sveže,
-			inovativno i jednostavno iskustvo. Uskoro ćete imati pristup našem potpuno novom digitalnom domu. Zahvaljujemo na vašem strpljenju i
-			podršci dok radimo na ovom projektu. Pratite nas kako biste bili u toku s najnovijim informacijama. Radujemo se što ćemo vam uskoro
-			predstaviti naše novo virtuelno utočište!
-			<br /> Srdačan pozdrav od Studio Zenit tima.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card href="https://www.instagram.com/fotostudiozenit?igsh=Ymp1ODM4bHI2aThz" title="Studio Zenit Instagram" body="" />
-		</ul>
-	</main>
+<Layout title="Početna | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
+	<header>
+		<Navigation />
+		<div class="content-wrapper">
+			<div class="img-wrapper">
+				<img src="/Logos/zlatan-bez-slova.png" alt="" />
+				<div class="intro-text">
+					<h1>FOTO<br />STUDIO<br /> ZENIT</h1>
+				</div>
+			</div>
+			<h2>~ Za vaše dragocene trenutke ~</h2>
+		</div>
+	</header>
+	<main></main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+	.content-wrapper {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
 	}
-	.astro-a {
+	.img-wrapper {
+		width: fit-content;
+		height: fit-content;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+	}
+	.img-wrapper img {
+		position: relative;
+		z-index: 10;
+		top: 10px;
+	}
+	.intro-text {
 		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
 		text-align: center;
-		margin-bottom: 1em;
+		font-size: 40px;
+		filter: drop-shadow(1px 0px 5px #727271b7);
+		color: #242424;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+	h2 {
+		position: absolute;
+		bottom: 20px;
+		border-top: 1px solid #c9b758;
+		border-bottom: 1px solid #c9b758;
+		padding: 5px;
+		color: rgb(255 255 255 / 58%);
 	}
 </style>

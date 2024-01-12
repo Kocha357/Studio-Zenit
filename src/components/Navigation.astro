@@ -1,11 +1,16 @@
-<nav>
+---
+
+---
+
+<nav id="navbar">
+	<img id="logo" src="/Logos/Zlatan-sa-slovima.png" alt="Foto studio Zenit full logo" />
 	<div class="links-wrapper">
-		<a href="">Početna</a>
+		<a href="/" class="active">Početna</a>
 		<a href="">O nama</a>
 		<a href="">Usluge</a>
 		<a href="">Galerija</a>
 		<a href="">Albumi</a>
-		<a href="">Kontakt</a>
+		<a href="/contacts">Kontakt</a>
 	</div>
 </nav>
 <style>
@@ -19,10 +24,31 @@
 		top: 0;
 		z-index: 99999;
 	}
+	#logo {
+		width: 110px;
+		position: absolute;
+		left: 20px;
+		display: none;
+	}
+	.show-img {
+		display: block !important;
+		transition: display 0.5s ease-out;
+	}
+	.scrolled {
+		background: linear-gradient(to left, #000000, #000000 30%, #121315 100%);
+		height: 60px;
+		transition: background-color 1s ease-out;
+		transition: height 0.5s ease-out;
+	}
 	.links-wrapper {
 		padding: 0 40px;
 		display: flex;
 		gap: 40px;
+	}
+	@media screen and (max-width: 1280px) {
+		.links-wrapper {
+			padding: 0 20px;
+		}
 	}
 	.links-wrapper a {
 		text-decoration: none;
@@ -38,4 +64,35 @@
 	.links-wrapper a:hover {
 		color: #d9ad5e;
 	}
+	nav a.active {
+		color: #d9ad5e;
+	}
 </style>
+<script>
+	window.onscroll = () => {
+		let navbar: any = document.getElementById("navbar");
+
+		let navBarLogo: any = document.getElementById("logo");
+		if (window.scrollY > 0) {
+			navbar.classList.add("scrolled");
+			navBarLogo.classList.add("show-img");
+		} else {
+			navbar.classList.remove("scrolled");
+			navBarLogo.classList.remove("show-img");
+		}
+	};
+
+	document.addEventListener("DOMContentLoaded", () => {
+		let currentPage = window.location.pathname;
+		console.log(currentPage);
+		let navLinks = document.querySelectorAll("nav a");
+		console.log(navLinks);
+		navLinks.forEach((link) => {
+			if (link.getAttribute("href") === currentPage) {
+				link.classList.add("active");
+			} else {
+				link.classList.remove("active");
+			}
+		});
+	});
+</script>

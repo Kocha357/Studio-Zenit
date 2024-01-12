@@ -1,0 +1,119 @@
+<header>
+	<div class="content-wrapper">
+		<div class="img-text-wrapper">
+			<div class="img-wrapper">
+				<img src="/Logos/zlatan-bez-slova.png" alt="Main logo of Foto studio Zenit" />
+			</div>
+			<div class="intro-text">
+				<h1>
+					<span class="smaller-font"><span class="first-letter">F</span>OTO <span class="first-letter">S</span>TUDIO</span><br />
+					<span class="bigger-font"><span class="first-letter">Z</span>ENIT</span>
+				</h1>
+			</div>
+		</div>
+		<h2>~ Za vaše dragocene trenutke ~</h2>
+	</div>
+</header>
+<style>
+	.content-wrapper {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		background-image: url("/hero-photo/hero-image.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	@media screen and (max-width: 1180px) {
+		.content-wrapper {
+			background-size: contain;
+		}
+	}
+	.content-wrapper::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #000000e0;
+	}
+	.img-text-wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+	}
+	.img-wrapper {
+		display: grid;
+		place-items: center;
+		position: relative;
+		top: -38px;
+	}
+	.img-wrapper img {
+		height: auto;
+		max-width: 600px;
+	}
+
+	.intro-text {
+		position: absolute;
+		top: 55%;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 40px;
+		filter: drop-shadow(1px 0px 5px #cfcfcdb7);
+		color: #101010;
+	}
+	@media screen and (max-width: 1280px) {
+		.intro-text {
+			font-size: 20px;
+			top: 59%;
+			font-weight: bold;
+		}
+	}
+	.first-letter {
+		color: #d9ad5e;
+		filter: none;
+	}
+	.smaller-font {
+		font-size: 60px;
+	}
+	@media screen and (max-width: 1280px) {
+		.smaller-font {
+			font-size: 40px;
+		}
+	}
+	.bigger-font {
+		font-size: larger;
+	}
+	@media screen and (max-width: 1280px) {
+		.bigger-font {
+			font-size: 60px;
+		}
+	}
+	h2 {
+		position: relative;
+		bottom: 20px;
+		border-top: 1px solid #d9ad5e;
+		border-bottom: 1px solid #d9ad5e;
+		padding: 5px;
+		color: rgb(255 255 255 / 58%);
+	}
+	@media screen and (max-width: 1280px) {
+		h2 {
+			font-size: 16px;
+		}
+	}
+	@media screen and (max-width: 320px) {
+		h2 {
+			font-size: 13px;
+		}
+	}
+</style>

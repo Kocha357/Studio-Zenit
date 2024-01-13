@@ -1,61 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
+import ContactForm from "../components/Contact-form.astro";
 ---
 
 <Layout title="Kontakt | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
 	<Navigation />
-	<section class="content-wrapper">
-		<form id="my-form" action="https://formspree.io/f/mleqdbpp" method="POST">
-			<label>Email:</label>
-			<input type="email" name="email" />
-			<label>Message:</label>
-			<input type="text" name="message" />
-			<button id="my-form-button">Submit</button>
-			<p id="my-form-status"></p>
-		</form>
-	</section>
+	<div class="title-wrap">
+		<h2>Kontakt</h2>
+		<p>
+			Zainteresovani za naše usluge? Kontaktirajte nas kako bismo razgovarali o vašim potrebama i prilagodili ponudu vašim željama. Vaša
+			slika vredi hiljadu reči, a mi smo tu da je ovekovečimo.
+		</p>
+	</div>
+	<ContactForm />
 </Layout>
 <style>
-	.content-wrapper {
-		height: 100vh;
-		width: 100%;
+	.title-wrap {
+		padding: 5px 20px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
+	}
+	h2 {
+		margin: 100px 0 0 0;
+		text-align: center;
+		color: #d9ad5e;
+	}
+	p {
+		color: rgb(255 255 255 / 58%);
+		font-weight: 600;
+		border-top: 1px solid #d9ad5e;
+		border-bottom: 1px solid #d9ad5e;
+		padding: 5px 0;
+		max-width: 1280px;
 	}
 </style>
-<script>
-	var form: any = document.getElementById("my-form");
-
-	async function handleSubmit(event: any) {
-		event.preventDefault();
-		var status: any = document.getElementById("my-form-status");
-		var data: any = new FormData(event.target);
-		fetch(event.target.action, {
-			method: form.method,
-			body: data,
-			headers: {
-				Accept: "application/json",
-			},
-		})
-			.then((response) => {
-				if (response.ok) {
-					status.innerHTML = "Thanks for your submission!";
-					form.reset();
-				} else {
-					response.json().then((data) => {
-						if (Object.hasOwn(data, "errors")) {
-							status.innerHTML = data["errors"].map((error: any) => error["message"]).join(", ");
-						} else {
-							status.innerHTML = "Oops! There was a problem submitting your form";
-						}
-					});
-				}
-			})
-			.catch((error) => {
-				status.innerHTML = "Oops! There was a problem submitting your form";
-			});
-	}
-	form.addEventListener("submit", handleSubmit);
-</script>

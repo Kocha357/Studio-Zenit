@@ -100,7 +100,7 @@
 	}
 	.show-aside {
 		right: 0 !important;
-		transition: right 1s ease-out;
+		transition: right 0.5s ease-out;
 	}
 	#logo {
 		width: 110px;
@@ -140,7 +140,6 @@
 		color: rgb(255 255 255 / 58%);
 		font-size: 20px;
 		text-transform: uppercase;
-		font-family: "Courier New", Courier, monospace;
 		cursor: pointer;
 		word-break: keep-all;
 		white-space: nowrap;
@@ -151,7 +150,6 @@
 		color: rgb(255 255 255 / 58%);
 		font-size: 20px;
 		text-transform: uppercase;
-		font-family: "Courier New", Courier, monospace;
 		cursor: pointer;
 		word-break: keep-all;
 		white-space: nowrap;
@@ -211,8 +209,10 @@
 	const aside: any = document.getElementById("side-menu");
 	hamburger.addEventListener("click", () => {
 		aside.classList.add("show-aside");
+		document.body.classList.add("disable-scroll");
 	});
 	closeBtn.addEventListener("click", () => {
 		aside.classList.remove("show-aside");
+		document.body.classList.remove("disable-scroll");
 	});
 </script>

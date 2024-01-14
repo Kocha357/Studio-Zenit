@@ -1,22 +1,59 @@
 <section class="content-wrapper">
+	<h2>Foto galerija</h2>
 	<div class="galery-wrapper">
-		<a href="">
-			<div class="photo-wrapper wedding"><h3>Venčanja</h3></div>
+		<a href="" class="photo-wrapper">
+			<div class="wedding"><img src="/main-galery-section/wedding-bg.png" alt="Fotografija Ivane i Lazara sa venčanja" /></div>
+			<h3>Venčanja</h3>
+			<p class="info-text">
+				Vaša ljubavna priča zaslužuje da bude zabeležena u najlepšem svetlu, a mi smo tu da uhvatimo svaki dragoceni trenutak. Naša
+				fotografska radnja posvećena je kreiranju nezaboravnih uspomena na vaše venčanje, pružajući vam vrhunsku uslugu.
+			</p>
 		</a>
-		<a href="">
-			<div class="photo-wrapper adulthud"><h3>Osamnaesti rodjendani</h3></div>
+		<a href="" class="photo-wrapper">
+			<div class="adulthud"><img src="/main-galery-section/adult-bg.png" alt="Fotografija sa osamnaestog rodjendana" /></div>
+			<h3>Osamnaesti rodjendani</h3>
+			<p class="info-text">
+				Dolazak punoletstva je poseban trenutak u životu, a mi smo tu da ga učinimo nezaboravnim. Naša fotografska radnja pruža vrhunsku
+				uslugu kako biste mogli uživati u svakom trenutku vašeg 18. rođendana, uhvaćenog kroz objektiv naših iskusnih fotografa.
+			</p>
 		</a>
-		<a href="">
-			<div class="photo-wrapper first-birthday"><h3>Prvi rodjendani</h3></div>
+		<a href="" class="photo-wrapper">
+			<div class="first-birthday"><img src="/main-galery-section/prvi-rodj-bg.png" alt="Fotografija sa prvog rodjendana" /></div>
+			<h3>Prvi rodjendani</h3>
+
+			<p class="info-text">
+				Prvi rođendan vašeg malog anđela označava posebnu etapu u vašem životu, a mi smo tu da taj trenutak učinimo zaista nezaboravnim.
+				Naša fotografska radnja posvećena je beleženju svakog nežnog izraza, svakog osmeha i svakog trenutka oduševljenja tokom ovog
+				posebnog dana.
+			</p>
 		</a>
-		<a href="">
-			<div class="photo-wrapper portraits"><h3>Portreti</h3></div>
+		<a href="" class="photo-wrapper">
+			<div class="portraits"><img src="/main-galery-section/portrait-bg-b.png" alt="Fotografija portreta" /></div>
+			<h3>Portreti</h3>
+			<p class="info-text">
+				U našoj fotografskoj radnji, portreti nisu samo slike – oni su umetnički prikazi vaše jedinstvene ličnosti. Naš tim iskusnih
+				fotografa fokusiran je na hvatanje vaše suštine, stvarajući portrete koji pričaju priču i otkrivaju ono najlepše u vama.
+			</p>
 		</a>
-		<a href="">
-			<div class="photo-wrapper photobook"><h3>Albumi</h3></div>
+		<a href="" class="photo-wrapper">
+			<div class="photobook"><img src="/main-galery-section/album-bg.png" alt="Album sa fotografijama" /></div>
+			<h3>Albumi</h3>
+			<p class="info-text">
+				Naša fotografska radnja donosi više od samo slika - donosimo vam iskustvo koje će vaša sećanja učiniti večnim kroz naše
+				personalizovane foto albume. Svaki album je pažljivo oblikovan kako bi odražavao vašu jedinstvenu priču, stvarajući autentičan i
+				trajan prikaz vaših dragocenih trenutaka.
+			</p>
 		</a>
-		<a href="">
-			<div class="photo-wrapper wall-collections"><h3>Zidne kolekcije</h3></div>
+		<a href="" class="photo-wrapper">
+			<div class="wall-collections">
+				<img src="/main-galery-section/zidna-bg.png" alt="Zidna kolekcija fotografija za vas dom" />
+			</div>
+			<h3>Zidne kolekcije</h3>
+			<p class="info-text">
+				Naša fotografska radnja pretvara vaše najlepše trenutke u umetničke komade koje možete ponosno istaknuti na zidovima svog doma. Naša
+				zidna kolekcija predstavlja spoj estetike, emocija i individualnosti, pružajući vam jedinstvenu priliku da stvorite galeriju koja
+				odražava vaš stil i priča vašu životnu priču.
+			</p>
 		</a>
 	</div>
 </section>
@@ -26,6 +63,13 @@
 		padding: 40px;
 		display: flex;
 		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	h2 {
+		color: #d9ad5e;
+		padding-bottom: 20px;
+		text-transform: uppercase;
 	}
 	@media screen and (max-width: 1280px) {
 		.content-wrapper {
@@ -42,6 +86,7 @@
 	@media screen and (max-width: 577px) {
 		.galery-wrapper {
 			grid-template-columns: 1fr;
+			gap: 15px;
 		}
 	}
 	@media screen and (min-width: 577px) and (max-width: 900px) {
@@ -52,6 +97,9 @@
 	.photo-wrapper {
 		text-transform: uppercase;
 		color: #d9ad5e;
+		background-color: #242424;
+
+		grid-column: span 1;
 	}
 	a {
 		text-decoration: none;
@@ -64,55 +112,34 @@
 	}
 	h3 {
 		padding: 10px;
-		background-color: rgba(0, 0, 0, 0.769);
 		margin: 0;
 	}
 	.photobook {
 		width: 100%;
-		height: 300px;
-		background-image: url("/hero-photo/placeholder-img.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
 	}
 	.first-birthday {
 		width: 100%;
-		height: 300px;
-		background-image: url("/hero-photo/placeholder-img.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
 	}
 	.adulthud {
 		width: 100%;
-		height: 300px;
-		background-image: url("/hero-photo/placeholder-img.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
 	}
 	.wedding {
 		width: 100%;
-		height: 300px;
-		background-image: url("/hero-photo/placeholder-img.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
 	}
 	.portraits {
 		width: 100%;
-		height: 300px;
-		background-image: url("/hero-photo/placeholder-img.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
 	}
 	.wall-collections {
 		width: 100%;
-		height: 300px;
-		background-image: url("/hero-photo/placeholder-img.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+	}
+	img {
+		width: 100%;
+	}
+	.info-text {
+		color: rgb(255 255 255 /58%);
+		text-transform: initial;
+		margin: 0;
+		padding: 5px 10px;
+		font-weight: 600;
 	}
 </style>

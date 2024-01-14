@@ -2,21 +2,44 @@
 interface Props {
 	title: string;
 	body: string;
-	href: string;
+	imgUrl: string;
+	imgAlt: string;
 }
 
-const { href, title, body } = Astro.props;
+const { imgUrl, title, body, imgAlt } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href} target="_blank">
-		<h2>
+<div class="link-card">
+	<div class="title-wrapp">
+		<img src={imgUrl} alt={imgAlt} />
+
+		<h4>
 			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style></style>
+		</h4>
+	</div>
+
+	<p>
+		{body}
+	</p>
+</div>
+<style>
+	.link-card {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.title-wrapp {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		color: rgb(255 255 255 /58%);
+	}
+	.title-wrapp img {
+		width: 50px;
+		height: 50px;
+		border-radius: 100%;
+	}
+	p {
+		color: rgb(255 255 255 /58%);
+	}
+</style>

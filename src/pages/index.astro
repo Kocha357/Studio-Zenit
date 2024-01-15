@@ -6,6 +6,7 @@ import GalerySection from "../components/Galery-section.astro";
 import Header from "../components/header.astro";
 import ContactForm from "../components/Contact-form.astro";
 import Comments from "../components/Comments.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Početna | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
@@ -111,10 +112,15 @@ import Comments from "../components/Comments.astro";
 				<p>Izrada reklamnog materijala</p>
 			</div>
 		</div>
+		<p>Za više detalja kliknite <a href="/services">Ovde</a>.</p>
 	</div>
 	<GalerySection />
 	<Comments />
+	<div class="contact-title">
+		<h2>Kontakt</h2>
+	</div>
 	<ContactForm />
+	<Footer />
 </Layout>
 <style>
 	.content-wrapper {
@@ -160,7 +166,7 @@ import Comments from "../components/Comments.astro";
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-color: #000000b0;
+		background-color: #000000ca;
 	}
 	@media screen and (max-width: 577px) {
 		.card-wrapper {
@@ -181,10 +187,30 @@ import Comments from "../components/Comments.astro";
 		grid-column: span 1;
 	}
 	.card p {
-		color: rgb(255 255 255 /70%);
+		color: rgb(255 255 255 /80%);
 		font-weight: 600;
 		text-align: center;
 
 		padding: 10px;
+	}
+	.contact-title {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 40px;
+		margin-bottom: 0;
+	}
+	.content-wrapper > p {
+		color: rgb(255 255 255 /80%);
+		position: relative;
+		padding: 10px 0;
+		border-top: 1px solid #d9ad5e;
+		border-bottom: 1px solid #d9ad5e;
+		margin-top: 20px;
+	}
+	p a {
+		text-decoration: none;
+		color: #d9ad5e;
 	}
 </style>

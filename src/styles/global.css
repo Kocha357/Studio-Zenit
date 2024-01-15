@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 body {
 	background: linear-gradient(to bottom, #121315, #000000 50%, #121315 100%);
 	padding: 0;

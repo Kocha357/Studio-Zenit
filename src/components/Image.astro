@@ -1,0 +1,32 @@
+---
+interface Props {
+	imgUrl: string;
+	imgAlt: string;
+	width: string;
+	height: string;
+}
+const { imgUrl, imgAlt, width, height } = Astro.props;
+---
+
+<div class="photo-wrapper">
+	<img src={imgUrl} alt={imgAlt} width={width} height={height} class="fs-img" />
+</div>
+<style></style>
+<script>
+	const fsImage: any = document.getElementsByClassName("fs-img");
+
+	for (let i = 0; i < fsImage.length; i++) {
+		fsImage[i].addEventListener(
+			"click",
+			((index) => () => {
+				if (!document.fullscreenElement) {
+					fsImage[index].requestFullscreen();
+				} else {
+					if (document.exitFullscreen) {
+						document.exitFullscreen();
+					}
+				}
+			})(i)
+		);
+	}
+</script>

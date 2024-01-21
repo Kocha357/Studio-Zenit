@@ -3,38 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import ContactForm from "../components/Contact-form.astro";
+import fetchData from "../api";
 import Image from "../components/Image.astro";
-const images = [
-	{
-		imgUrl: "/about-section/Anja_013.png",
-		alt: "Fotografija sa Anjinog punoletstva",
-	},
-	{
-		imgUrl: "/about-section/BojanaMarko_1095.png",
-		alt: "Fotografija sa venčanja Bojane i Marka",
-	},
-	{
-		imgUrl: "/about-section/BojanaMarko_1447.png",
-		alt: "Fotografija Bojane i Marka sa venčanja",
-	},
-	{
-		imgUrl: "/about-section/IvanaLazar_0139.png",
-		alt: "Fotografija Ivana i Lazar",
-	},
-	{
-		imgUrl: "/about-section/Teodora_0063.png",
-		alt: "Slika Teodore sa punoletstva",
-	},
-	{
-		imgUrl: "/about-section/Teodora_0387.png",
-		alt: "Teodorina fotografija sa punoletstva",
-	},
-	{
-		imgUrl: "/about-section/Aleksandra_0204.png",
-		alt: "Aleksandrin portret-fotografija",
-	},
-	
-];
+
+const apiUrl = import.meta.env.ABOUT_PHOTOS_API_URL ;
+const images =await fetchData(apiUrl)
+
 ---
 
 <Layout title="O nama | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
@@ -61,9 +35,9 @@ const images = [
 	<h2>NAŠ TIM</h2>
 	<div class="photos">
 		{
-			images.map((img) => {
-				return <Image imgUrl={img.imgUrl} imgAlt={img.alt} width="250px" height="auto" />;
-			})
+			images.map((img:any) => 
+				{return <Image imgUrl={img.imageUrl} imgAlt={img.imageAlt} width="250px" height="auto" />}
+			)
 		}
 	</div>
 	<ContactForm />
@@ -136,3 +110,6 @@ const images = [
 		color: #d9ad5e;
 	}
 </style>
+<script>
+
+</script>

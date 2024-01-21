@@ -1,3 +1,7 @@
+---
+const formActionUrl = import.meta.env.EMAIL_ACTION_URL
+---
+
 <section class="content-wrapper">
 	<div class="map-and-form-wrap">
 		<div class="form-wrapper">
@@ -86,7 +90,7 @@
 					>Ive Andrića 1a, Bajina Bašta
 				</p>
 				<h3>Pošaljite nam poruku!</h3>
-				<form id="my-form" action="https://formspree.io/f/mleqdbpp" method="POST">
+				<form id="my-form" action={formActionUrl} method="POST">
 					<label class="star">Ime i prezime:<span>*</span></label>
 					<input type="text" name="full-name" placeholder="npr. Petar Petrovic" required autocomplete="off" />
 					<label class="star">Email:<span>*</span></label>

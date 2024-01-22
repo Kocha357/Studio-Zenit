@@ -8,12 +8,16 @@ async function fetchData(url: string): Promise<{ imageUrl: string; imageAlt: str
 
 		const imgData = await response.json();
 
-		const allImages: any[] = imgData?.data[0]?.attributes?.image?.data || [];
+		const allImages: any[] = imgData?.data || [];
 
-		const imageInfoArray = allImages.map((image: any) => {
-			const imageUrl = image?.attributes?.url || "";
-			const imageAlt = image?.attributes?.alternativeText || "";
-			return { imageUrl, imageAlt };
+		const imageInfoArray = allImages.flatMap((item: any) => {
+			const images = item?.attributes?.image?.data || [];
+
+			return images.map((image: any) => {
+				const imageUrl = image?.attributes?.url || "";
+				const imageAlt = image?.attributes?.alternativeText || "";
+				return { imageUrl, imageAlt };
+			});
 		});
 
 		return imageInfoArray;
@@ -24,3 +28,4 @@ async function fetchData(url: string): Promise<{ imageUrl: string; imageAlt: str
 }
 
 export default fetchData;
+  

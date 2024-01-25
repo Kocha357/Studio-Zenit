@@ -1,6 +1,10 @@
 * {
 	box-sizing: border-box;
 }
+h1{
+	color:#d9ad5e;
+	text-align: center;
+}
 body {
 	background: linear-gradient(to bottom, #121315, #000000 50%, #121315 100%);
 	padding: 0;

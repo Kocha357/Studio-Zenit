@@ -1,0 +1,88 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+import ContactForm from "../../components/Contact-form.astro";
+import fetchData from "../../api";
+import Image from "../../components/Image.astro";
+
+const apiUrl = import.meta.env.PORTRAIT_PHOTOS_API_URL;
+
+const { imageInfoArray } = await fetchData(apiUrl, 0);
+---
+
+<Layout title="Portreti | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
+	<Navigation />
+	<div class="wrapper">
+		<h1>PORTRETI</h1>
+
+		<div class="content-wrapper" id="photoGrid">
+			{
+				imageInfoArray.map((img: any) => (
+					<div class="photo">
+						<Image imgUrl={img.imageUrl} imgAlt={img.imageAlt} width="100%" height="auto" />
+					</div>
+				))
+			}
+		</div>
+	</div>
+	<ContactForm />
+	<Footer />
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const photoGrid: any = document.getElementById("photoGrid");
+			const photos: any = photoGrid.querySelectorAll(".photo");
+
+			photos.forEach((photo: any) => {
+				const image = photo.querySelector("img");
+				const aspectRatio = image.naturalWidth < image.naturalHeight;
+				photo.style.gridRow = aspectRatio ? "span 2" : "span 1";
+			});
+		});
+	</script>
+</Layout>
+<style>
+	h2 {
+		color: #d9ad5e;
+	}
+	.active {
+		color: #d9ad5e;
+	}
+	.nav {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		place-items: baseline;
+		text-align: center;
+	}
+	@media screen and (max-width: 1280px) {
+		.nav {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	.nav div {
+		padding: 20px;
+		text-transform: uppercase;
+	}
+	.wrapper {
+		margin-top: 100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.content-wrapper {
+		width: 100%;
+		max-width: 1280px;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(20%, 1fr));
+		margin: 40px 0;
+		column-gap: 5px;
+		row-gap: 5px;
+		padding: 20px;
+	}
+	@media screen and (max-width: 1280px) {
+		.content-wrapper {
+			grid-template-columns: repeat(3, minmax(30%, 1fr));
+		}
+	}
+</style>

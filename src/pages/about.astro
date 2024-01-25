@@ -7,35 +7,24 @@ import fetchData from "../api";
 import Image from "../components/Image.astro";
 
 const apiUrl = import.meta.env.ABOUT_PHOTOS_API_URL ;
-const images =await fetchData(apiUrl)
+const {imageInfoArray,aboutText} = await fetchData(apiUrl,0)
 
 ---
 
 <Layout title="O nama | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
 	<Navigation />
 	<div class="content-wrapper">
-		<h2>O nama</h2>
+		<h1>O nama</h1>
 
 		<p>
-			Dobrodošli u Studio Zenit - vaša fotografska radnja za besprekorne uspomene u Bajinoj Bašti!<br /> Naš osnivač Lazar Vasiljević, sa više
-			od <span class="colored">13 godina iskustva u fotografiji</span>, stvorio je oazu kreativnosti i strasti gde svaki trenutak postaje
-			nezaboravan.<br /> Vrhunski foto i video studio - Studio Zenit, prepoznat ranije kao Laki foto, <span class="colored"
-				>osnovan je 2022.godine</span
-			>. Sa <span class="colored">više od 130 uspešnih pokrivenih svečanosti</span> u poslednje dve godine, naša reputacija govori sama za sebe.<br
-			/> Zadovoljstvo naših klijenata je ključno, a njihovih 130 preporuka svedoče o našoj posvećenosti pružanju vrhunskih usluga.<br /> Naš
-			cilj je jednostavan - pružiti vam ne samo fotografije, već iskustvo koje će izvući najlepše trenutke iz svakog okvira.<br /> Studio Zenit
-			se ponosi timom od <span class="colored">tri iskusna fotografa, dva vrhunska videografa, vozačem drona i pet pomagača</span> koji su tu
-			da obezbede da svako veselje bude savršeno zabeleženo.<br /> Locirani u prelepom okruženju Bajine Bašte, mi smo vaši lokalni stručnjaci
-			za fotografiju i video produkciju.<br /> Naša posvećenost kvalitetu i pažljiv pristup svakom projektu čini nas prvoklasnim izborom za sve
-			vaše posebne trenutke.<br /> Započnite putovanje kroz vreme i emocije sa Foto Studio Zenit.<br /> Naš stručni tim čeka da vaše uspomene
-			pretvori u umetnost.<br /> Kontaktirajte nas i dozvolite nam da zajedno stvorimo najlepše fotografije i snimke.<br /> Studio Zenit - vaša
-			adresa za nezaboravne trenutke!
+			{aboutText}
 		</p>
 	</div>
 	<h2>NAŠ TIM</h2>
 	<div class="photos">
 		{
-			images.map((img:any) => 
+			imageInfoArray.map((img:any) => 
+
 				{return <Image imgUrl={img.imageUrl} imgAlt={img.imageAlt} width="250px" height="auto" />}
 			)
 		}
@@ -44,6 +33,11 @@ const images =await fetchData(apiUrl)
 	<Footer />
 </Layout>
 <style>
+	h1{
+		text-transform: uppercase;
+		text-align: center;
+		position: relative;
+	}
 	.photos {
 		display: flex;
 		min-width: 100%;
@@ -110,6 +104,3 @@ const images =await fetchData(apiUrl)
 		color: #d9ad5e;
 	}
 </style>
-<script>
-
-</script>

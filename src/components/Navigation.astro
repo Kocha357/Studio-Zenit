@@ -8,8 +8,26 @@
 		<a href="/" class="active">Početna</a>
 		<a href="/about">O nama</a>
 		<a href="/services">Usluge</a>
-		<a href="/gallery">Galerija</a>
-		<a href="/albums">Albumi</a>
+		<details>
+			<summary id="gallery">Galerija</summary>
+			<div class="links">
+				<a href="/gallery/weddings">VENČANJA</a>
+				<a href="/gallery/18-birthday">18.RODJENDANI</a>
+				<a href="/gallery/1-birthday">1.RODJENDANI</a>
+				<a href="/gallery/portraits">PORTRETI</a>
+			</div>
+		</details>
+		<details>
+			<summary id="albums">Albumi</summary>
+			<div class="links">
+				<a href="/albums/weddings">VENČANJA</a>
+				<a href="/albums/18-birthday">18.RODJENDANI</a>
+				<a href="/albums/1-birthday">1.RODJENDANI</a>
+				<a href="/albums/portraits">PORTRETI</a>
+			</div>
+		</details>
+		<a href="/wall-collections">ZIDNE KOLEKCIJE</a>
+
 		<a href="/contacts">Kontakt</a>
 	</div>
 	<div class="hamburger" id="hamburger">
@@ -18,18 +36,38 @@
 		<div></div>
 	</div>
 	<div id="side-menu">
-		<img class="logo-aside" src="/Logos/zlatan-bez-slova.png" alt="Foto studio Zenit full logo" />
 
 		<a href="/" id="from-top" class="active">Početna</a>
 		<a href="/about">O nama</a>
 		<a href="/services">Usluge</a>
-		<a href="/gallery">Galerija</a>
-		<a href="/albums">Albumi</a>
+		<details>
+			<summary id="gallery-mobile">Galerija</summary>
+			<div class="links">
+				<a href="/gallery/weddings">VENČANJA</a>
+				<a href="/gallery/18-birthday">18.RODJENDANI</a>
+				<a href="/gallery/1-birthday">1.RODJENDANI</a>
+				<a href="/gallery/portraits">PORTRETI</a>
+			</div>
+		</details>
+		<details>
+			<summary id="albums-mobile">Albumi</summary>
+			<div class="links">
+				<a href="/albums/weddings">VENČANJA</a>
+				<a href="/albums/18-birthday">18.RODJENDANI</a>
+				<a href="/albums/1-birthday">1.RODJENDANI</a>
+				<a href="/albums/portraits">PORTRETI</a>
+			</div>
+		</details>
+		<a href="/wall-collections">ZIDNE KOLEKCIJE</a>
+
 		<a href="/contacts">Kontakt</a>
 		<div id="close">+</div>
+		<img class="logo-aside" src="/Logos/zlatan-bez-slova.png" alt="Foto studio Zenit full logo" />
+
 	</div>
 </nav>
 <style>
+	
 	nav {
 		height: 100px;
 		display: flex;
@@ -67,7 +105,8 @@
 		align-items: center;
 		flex-direction: column;
 		width: 80%;
-		overflow: hidden;
+		overflow-y: auto;
+		overflow-x: hidden;
 	}
 	@media screen and (max-width: 1280px) {
 		#side-menu {
@@ -79,8 +118,7 @@
 	}
 	.logo-aside {
 		width: 400px;
-		position: absolute;
-		bottom: -100px;
+		
 	}
 	#close {
 		transform: rotate(45deg);
@@ -134,6 +172,36 @@
 			display: none;
 		}
 	}
+	.links-wrapper summary{
+		text-decoration: none;
+		outline: none;
+		color: rgb(255 255 255 / 58%);
+		font-size: 20px;
+		text-transform: uppercase;
+		cursor: pointer;
+		word-break: keep-all;
+		white-space: nowrap;
+	}
+	.links-wrapper details .links{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		position: absolute;
+		background: linear-gradient(to left, #121315, #121315 10%, #000000 100%);
+		border-radius: 8px;
+		margin-top: 20px;
+		border: 1px solid #d9ad5e;
+
+	}
+	details summary:hover{
+		color:#d9ad5e ;
+	}
+	
+	
+	details .links a{
+		font-size: 14px;
+		padding: 10px;
+	}
 	.links-wrapper a {
 		text-decoration: none;
 		outline: none;
@@ -155,6 +223,27 @@
 		white-space: nowrap;
 		margin-top: 20px;
 	}
+
+	#side-menu .links{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		background: linear-gradient(to left, #121315, #121315 10%, #000000 100%);
+		border-radius: 8px;
+		border: 1px solid #d9ad5e;
+	}
+	#side-menu summary{
+		text-decoration: none;
+		outline: none;
+		color: rgb(255 255 255 / 58%);
+		font-size: 20px;
+		text-transform: uppercase;
+		cursor: pointer;
+		word-break: keep-all;
+		white-space: nowrap;
+		text-align: center;
+		margin-top: 20px;
+	}
 	#from-top {
 		margin-top: 50px !important;
 	}
@@ -167,6 +256,24 @@
 	.links-wrapper a.active {
 		color: #d9ad5e;
 	}
+	.links-wrapper details summary.active{
+		color: #d9ad5e;
+	}
+	#side-menu details summary.active{
+		color: #d9ad5e;
+	}
+	details summary:focus{
+		color: #d9ad5e;
+
+	
+	}
+	summary{
+		outline:none;
+	}
+	details{
+		outline: none;
+	}
+	
 </style>
 <script>
 	window.onscroll = () => {
@@ -187,14 +294,32 @@
 		console.log(currentPage);
 		let navLinks = document.querySelectorAll("#side-menu a");
 		let navLinksDesktop = document.querySelectorAll(".links-wrapper a");
+		let gallery:any = document.getElementById('gallery');
+		let albums:any = document.getElementById('albums')
+		let galleryMobile:any = document.getElementById('gallery-mobile');
+		let albumsMobile:any = document.getElementById('albums-mobile')
 		console.log(navLinks);
 		navLinks.forEach((link) => {
 			if (link.getAttribute("href") === currentPage) {
 				link.classList.add("active");
-			} else {
+			}else {
 				link.classList.remove("active");
+				
 			}
 		});
+		if(currentPage.includes('gallery')){
+				gallery.classList.add("active");
+				galleryMobile.classList.add('active')
+			} else if(currentPage.includes('albums')){
+				albums.classList.add("active");
+				albumsMobile.classList.add('active')
+			}else{
+				gallery.classList.remove("active");
+				galleryMobile.classList.remove('active');
+				albums.classList.remove('active')
+				albumsMobile.classList.remove('active')
+
+			}
 		navLinksDesktop.forEach((link) => {
 			if (link.getAttribute("href") === currentPage) {
 				link.classList.add("active");

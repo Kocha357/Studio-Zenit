@@ -14,12 +14,17 @@ const { imageInfoArray } = await fetchData(apiUrl, 0);
 <Layout title="Venčanja | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
 	<Navigation />
 	<div class="wrapper">
-		<h1>VENČANJA</h1>
+		<div class="heading-wrapper">
+			<h1>VENČANJA</h1>
+			<p>Gde god se pogleda, svaki kadar postaje priča, a svaki trenutak se pretvara u večnost. Ovde, svaka fotografija nije samo snimak, već ljubavna priča ispričana kroz magiju objektiva. Duboko smo zahvalni što delite s nama deo vašeg jedinstvenog putovanja kroz ljubav i radosti venčanja.
+
+				Hvala vam na dozvoli da budemo svedoci i kustosi vaših najposebnijih trenutaka. Ova galerija nije samo mesto gde se slike čuvaju; to je živi spomenik vašoj ljubavi, svedočanstvo o vašem jedinstvenom putovanju.</p>
+		</div>
 
 		<div class="content-wrapper" id="photoGrid">
 			{
 				imageInfoArray.map((img: any) => (
-					<div class="photo">
+					<div class="photo" style={`grid-row: ${img.aspectRatio === 'portrait' ? 'span 2' : 'span 1'}`}>
 						<Image imgUrl={img.imageUrl} imgAlt={img.imageAlt} width="100%" height="auto" />
 					</div>
 				))
@@ -28,20 +33,52 @@ const { imageInfoArray } = await fetchData(apiUrl, 0);
 	</div>
 	<ContactForm />
 	<Footer />
-	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			const photoGrid: any = document.getElementById("photoGrid");
-			const photos: any = photoGrid.querySelectorAll(".photo");
-
-			photos.forEach((photo: any) => {
-				const image = photo.querySelector("img");
-				const aspectRatio = image.naturalWidth < image.naturalHeight;
-				photo.style.gridRow = aspectRatio ? "span 2" : "span 1";
-			});
-		});
-	</script>
+	
 </Layout>
 <style>
+	.heading-wrapper{
+		text-align: center;
+		background-image: url('/main-galery-section/weddings-bg.png');
+		background-repeat: no-repeat;
+		background-size: cover;		
+		background-position:center;
+		background-attachment: fixed;
+		position: relative;
+		width: 100%;
+		padding:100px 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: calc(100vh - 100px);
+
+	}
+	@media screen and (max-width:1300px){
+		.heading-wrapper{
+			background-image: url('/main-galery-section/weddings-bg-mobile.png');
+
+		}
+	}
+	.heading-wrapper::before{
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background:  #000000d5 ;
+
+	}
+	.heading-wrapper h1,.heading-wrapper p{
+		position: relative;
+	}
+
+	.heading-wrapper p{
+		max-width: 1280px;
+		text-align: center;
+		color: rgb(255 255 255 /80%);
+
+	}
 	h2 {
 		color: #d9ad5e;
 	}

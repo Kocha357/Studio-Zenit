@@ -1,6 +1,6 @@
 async function fetchAlbums(
 	apiUrl: string
-): Promise<{ albums: { headingText: string; images: { imageUrl: string; imageAlt: string }[] }[] }> {
+): Promise<{ albums: { headingText: string; images: { imageUrl: string; imageAlt: string; aspectRatio: string }[] }[] }> {
 	try {
 		const response = await fetch(apiUrl);
 
@@ -18,7 +18,9 @@ async function fetchAlbums(
 			const imageInfoArray = images.map((image: any) => {
 				const imageUrl = image?.attributes?.url || "";
 				const imageAlt = image?.attributes?.alternativeText || "";
-				return { imageUrl, imageAlt };
+				const aspectRatio = image?.attributes?.width < image?.attributes?.height ? "portrait" : "landscape";
+
+				return { imageUrl, imageAlt, aspectRatio };
 			});
 
 			return { headingText, images: imageInfoArray };

@@ -36,6 +36,11 @@ const { imgUrl, imgAlt, width, height } = Astro.props;
     .photo-wrapper{
         height: 100%;
     }
+    @media screen and (min-width:1280px){
+        .fs-img:hover{
+          transform: scale(1.02);
+        }
+    }
     .modal-content {	
         width: 100%;
         height: 100%;
@@ -91,6 +96,8 @@ const { imgUrl, imgAlt, width, height } = Astro.props;
     .fs-img{
         object-fit: cover;
          height: 100%;
+         cursor: pointer;
+
     }
 	
 </style>

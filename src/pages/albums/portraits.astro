@@ -14,14 +14,14 @@ const { albums } = await fetchAlbums(apiUrl);
 <Layout title="Albumi portreta | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
 	<Navigation />
 	<div class="wrapper">
-		<h1>PORTRETI</h1>
+		<h1>ALBUMI PORTRETA</h1>
 		{
 			albums.map((album: any) => (
 				<>
 					<h2>{album.headingText}</h2>
 					<div class="content-wrapper" id="photoGrid">
 						{album.images.map((img: any) => (
-							<div class="photo">
+							<div class="photo" style={`grid-row: ${img.aspectRatio === 'portrait' ? 'span 2' : 'span 1'}`}>
 								<Image imgUrl={img.imageUrl} imgAlt={img.imageAlt} width="100%" height="auto" />
 							</div>
 						))}
@@ -32,18 +32,7 @@ const { albums } = await fetchAlbums(apiUrl);
 	</div>
 	<ContactForm />
 	<Footer />
-	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			const photoGrid: any = document.getElementById("photoGrid");
-			const photos: any = photoGrid.querySelectorAll(".photo");
-
-			photos.forEach((photo: any) => {
-				const image = photo.querySelector("img");
-				const aspectRatio = image.naturalWidth < image.naturalHeight;
-				photo.style.gridRow = aspectRatio ? "span 2" : "span 1";
-			});
-		});
-	</script>
+	
 </Layout>
 <style>
 	h2 {

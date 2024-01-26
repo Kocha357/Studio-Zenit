@@ -11,10 +11,10 @@ const apiUrl = import.meta.env.BIRTHDAY_ALBUM_API_URL;
 const { albums } = await fetchAlbums(apiUrl);
 ---
 
-<Layout title="Albumi 18.rodjendani | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
+<Layout title="Albumi 18.rođendani | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
 	<Navigation />
 	<div class="wrapper">
-		<h1>ALBUMI OSAMNAESTIH RODJENDANA</h1>
+		<h1>ALBUMI OSAMNAESTIH ROĐENDANA</h1>
 		{
 			albums.map((album: any) => (
 				<>

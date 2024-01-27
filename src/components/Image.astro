@@ -9,7 +9,7 @@ const { imgUrl, imgAlt, width, height } = Astro.props;
 ---
 
 <div class="photo-wrapper">
-	<img src={imgUrl} alt={imgAlt} width={width} height={height} class="fs-img" />
+	<img src={imgUrl} alt={imgAlt} width={width} height={height} loading="lazy" class="fs-img" />
 </div>
 <div id="fullscreen-modal" class="modal">
 	<span class="close" id="close">&times;</span>

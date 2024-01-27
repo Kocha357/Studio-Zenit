@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import ContactForm from "../components/Contact-form.astro";
+---
+
+<Layout title="Usluge | Foto studio Zenit" description="Astro descriptio" keywords="Astro keywords">
+	<Navigation />
+	<div class="content-wrapper">
+		<h1>USLUGE</h1>
+		<div class="informations">
+			<div class="infos">
+				<h2>Fotografisanje i snimanje <br />različitih vrsta svečanosti</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum a facilis sed. Vel incidunt minus quos corrupti. Reprehenderit,
+					accusamus commodi?
+				</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+				</ul>
+			</div>
+			<div class="infos">
+				<h2>Izrada photobook-ova, klasičnih albuma <br />i fotografija na platnu</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum a facilis sed. Vel incidunt minus quos corrupti. Reprehenderit,
+					accusamus commodi?
+				</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+				</ul>
+			</div>
+			<div class="infos">
+				<h2>Iznajmljivalje efekata za proslave:<br /> suvi led, vatromet, balončići</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum a facilis sed. Vel incidunt minus quos corrupti. Reprehenderit,
+					accusamus commodi?
+				</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+				</ul>
+			</div>
+			<div class="infos">
+				<h2>Izrada reklamnog materijala</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum a facilis sed. Vel incidunt minus quos corrupti. Reprehenderit,
+					accusamus commodi?
+				</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ab?</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<ContactForm />
+	<Footer />
+</Layout>
+<style>
+	.content-wrapper {
+		margin-top: 100px;
+		margin-bottom: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.informations {
+		max-width: 1280px;
+		width: 100%;
+		padding: 20px;
+	}
+	.infos h2 {
+		width: 100%;
+		text-align: center;
+		color: #d9ad5e;
+	}
+	.infos p {
+		text-align: center;
+	}
+	.infos {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		border-top: 1px solid #d9ad5e;
+		border-bottom: 1px solid #d9ad5e;
+	}
+</style>

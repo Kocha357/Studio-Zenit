@@ -21,7 +21,63 @@ const { title, description, keywords } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<div id="loader">
+			<img src="/Logos/zlatan-kis-i-slova.png" alt="Foto studio zenit logo">
+			<div class="loading">
+				<div class="animated-element"></div>
+			</div>
+		</div>
 		<slot />
 	</body>
 </html>
-<style></style>
+<style>
+	body{
+		position: relative;
+	}
+	#loader{
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 100000;
+		background: linear-gradient(to bottom, #121315, #000000 50%, #121315 100%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+	}
+	.loading{
+		width: 60%;
+		height: 100px;
+		display: flex;
+		overflow: hidden;
+
+	}
+	.animated-element{
+		background-color: #d9ad5e;
+		width: 60px;
+		height: 5px;
+		animation: loader-animation 1s linear infinite;
+	}
+	#loader img{
+		width: 250px;
+
+	}
+	@keyframes loader-animation{
+		0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(60vw); /* End position */
+  }
+}
+	
+</style>
+<script>
+	const loader:any = document.getElementById('loader');
+	window.addEventListener('load',()=>{
+		loader.style.display = 'none'
+	})
+</script>

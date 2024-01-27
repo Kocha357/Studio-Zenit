@@ -102,6 +102,7 @@ const { imgUrl, imgAlt, width, height } = Astro.props;
 	
 </style>
 <script>
+    let startX:any;
     const fsImage:any = document.getElementsByClassName("fs-img");
     const modal:any = document.getElementById("fullscreen-modal");
     const modalImage:any = document.getElementById("modal-image");
@@ -155,4 +156,24 @@ const { imgUrl, imgAlt, width, height } = Astro.props;
             changeImage( 1);
         }
     });
+    document.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  document.addEventListener('touchmove', (e) => {
+    // Prevent scrolling
+    e.preventDefault();
+  });
+
+  document.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+
+    if (deltaX > 50) {
+      // Swipe right
+      changeImage(-1);
+    } else if (deltaX < -50) {
+      // Swipe left
+      changeImage(1);
+    }})
 </script>

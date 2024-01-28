@@ -13,7 +13,7 @@ const { imageInfoArray } = await fetchData(apiUrl, 0);
 
 <Layout title="Portreti | Foto studio Zenit" description="Istražite našu galeriju portreta gde umetnost susreće stvarnost. Svaki portret nije samo slika, već priča koja oživljava dušu. Foto studio Zenit beleži raznolikost lica, izraza i karaktera kroz umetnički čin koji hvata suštinu ličnosti. Otkrijte jedinstvene priče iza svakog pojedinca." 
 keywords="Portreti,Foto studio Zenit,Portretna fotografija,Umetnički portreti,Karakterni portreti,Lice i izraz,Galerija portreta,Fotografska umetnost,Ličnost na fotografiji,Umetnost portreta">
-	<Navigation />
+	
 	<div class="wrapper">
 		
 		<div class="heading-wrapper">
@@ -31,8 +31,7 @@ keywords="Portreti,Foto studio Zenit,Portretna fotografija,Umetnički portreti,K
 			}
 		</div>
 	</div>
-	<ContactForm />
-	<Footer />
+	
 	
 </Layout>
 <style>
@@ -57,9 +56,9 @@ keywords="Portreti,Foto studio Zenit,Portretna fotografija,Umetnički portreti,K
 	.heading-wrapper::before{
 		position: absolute;
 		content: '';
-		top: 0;
+		top: -1px;
 		right: 0;
-		bottom: 0;
+		bottom: -1px;
 		left: 0;
 		background:  #000000d5;
 

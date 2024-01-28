@@ -14,7 +14,6 @@ const { imageInfoArray } = await fetchData(apiUrl, 0);
 <Layout title="Zidne kolekcije | Foto studio Zenit" 
 description="Uživajte u našim zidnim kolekcijama - Foto studio Zenit pruža jedinstveno vizuelno iskustvo. Svaka slika je pažljivo odabrana da bi obogatila vaš prostor. Pejzaži, apstrakcije i portreti koji donose karakter i dušu u vaš dom. Pogledajte našu galeriju i pronađite savršenu fotografiju za vas." 
 keywords="Zidne kolekcije,Foto studio Zenit,Galerija zidnih fotografija,Umetnost za dom,Pejzažne fotografijeApstraktne fotografije,Portretna fotografija,Vizuelno iskustvo,Ukrasni zidovi,Fotografije za enterijer,Portreti,Venčanja">
-	<Navigation />
 	<div class="wrapper">
 		<div class="heading-wrapper">
 			<h1>ZIDNE KOLEKCIJE</h1>
@@ -30,8 +29,7 @@ keywords="Zidne kolekcije,Foto studio Zenit,Galerija zidnih fotografija,Umetnost
 			}
 		</div>
 	</div>
-	<ContactForm />
-	<Footer />
+	
 	
 </Layout>
 <style>
@@ -55,9 +53,9 @@ keywords="Zidne kolekcije,Foto studio Zenit,Galerija zidnih fotografija,Umetnost
 	.heading-wrapper::before{
 		position: absolute;
 		content: '';
-		top: 0;
+		top: -1px;
 		right: 0;
-		bottom: 0;
+		bottom: -1px;
 		left: 0;
 		background:  #000000d5 ;
 

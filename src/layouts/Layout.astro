@@ -1,5 +1,8 @@
 ---
 import * as globalCss from "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import ContactForm from "../components/Contact-form.astro";
+import Footer from "../components/Footer.astro";
 interface Props {
 	title: string;
 	description: string;
@@ -31,7 +34,13 @@ const { title, description, keywords } = Astro.props;
 				<div class="animated-element"></div>
 			</div>
 		</div>
-		<slot />
+		<Navigation/>
+		<div class="slot-wrapp">
+
+			<slot />
+		</div>
+		<ContactForm/>
+		<Footer/>
 	</body>
 </html>
 <style>
@@ -76,6 +85,15 @@ const { title, description, keywords } = Astro.props;
   100% {
     transform: translateX(60vw); /* End position */
   }
+}
+.slot-wrapp{
+	position: relative;
+	margin-bottom: 20px;
+}
+@media screen and (max-width:1280px){
+	.slot-wrapp{
+		margin-bottom: 0;
+	}
 }
 	
 </style>

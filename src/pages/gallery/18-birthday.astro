@@ -13,7 +13,7 @@ const { imageInfoArray } = await fetchData(apiUrl, 0);
 
 <Layout title="Osamnaesti rođendani | Foto studio Zenit" description="Istražite naše fotografije osamnaestih rođendana, gde slavimo prelazak u svet odraslih. Svaka slika je priča, a svaki osmeh svedoči o radosti tog posebnog dana. Foto studio Zenit je tu da uhvati svaki dragoceni trenutak i pretvori ga u večna sećanja." 
 keywords="Osamnaesti rođendani,Foto studio Zenit,Slavlje osamnaestog rođendana,Osamnaestica,Fotografije proslave punoletstva,Odrastanje,Rođendanska galerija,Slike osamnaestog rođendana,Osmeh na rođendanu,Slavljenik punoletstva">
-	<Navigation />
+	
 	<div class="wrapper">
 		
 		<div class="heading-wrapper">
@@ -30,8 +30,7 @@ keywords="Osamnaesti rođendani,Foto studio Zenit,Slavlje osamnaestog rođendana
 			}
 		</div>
 	</div>
-	<ContactForm />
-	<Footer />
+	
 	
 </Layout>
 <style>
@@ -61,9 +60,9 @@ keywords="Osamnaesti rođendani,Foto studio Zenit,Slavlje osamnaestog rođendana
 	.heading-wrapper::before{
 		position: absolute;
 		content: '';
-		top: 0;
+		top: -1px;
 		right: 0;
-		bottom: 0;
+		bottom: -1px;
 		left: 0;
 		background:  #000000d5 ;
 

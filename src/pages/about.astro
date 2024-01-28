@@ -13,7 +13,6 @@ const {imageInfoArray,aboutText} = await fetchData(apiUrl,0)
 
 <Layout title="O nama | Foto studio Zenit" description="Upoznajte Foto studio Zenit kroz našu priču i tim. Sa strašću za fotografiju i posvećenošću kvalitetu, nudimo vrhunske usluge koje će vaše trenutke pretvoriti u trajne uspomene. Otkrijte više o našem timu i poslovanju." 
 keywords="Foto studio Zenit,O namaTim,Fotografi,Fotografske usluge,Kvalitet fotografija,Profesionalna fotografija,Fotografisanje,Posvećenost kvalitetu,Uspomene">
-	<Navigation />
 	<div class="content-wrapper">
 		<h1>O nama</h1>
 
@@ -30,8 +29,7 @@ keywords="Foto studio Zenit,O namaTim,Fotografi,Fotografske usluge,Kvalitet foto
 			)
 		}
 	</div>
-	<ContactForm />
-	<Footer />
+	
 </Layout>
 <style>
 	h1{
@@ -83,8 +81,8 @@ keywords="Foto studio Zenit,O namaTim,Fotografi,Fotografske usluge,Kvalitet foto
 	.content-wrapper::before {
 		content: "";
 		position: absolute;
-		top: 0;
-		bottom: 0;
+		top: -1px;
+		bottom: -1px;
 		left: 0;
 		right: 0;
 		background: #000000bc;

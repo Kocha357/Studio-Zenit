@@ -13,7 +13,6 @@ const { imageInfoArray } = await fetchData(apiUrl, 0);
 
 <Layout title="Venčanja | Foto studio Zenit" description="Izdvajamo posebne trenutke venčanja kroz naše fotografije koje oživljavaju svaki detalj i emociju. Foto studio Zenit je tu da zabeleži vašu ljubavnu priču kroz magiju objektiva. Pogledajte našu galeriju venčanja i pronađite inspiraciju za svoj poseban dan." 
 keywords="Venčanja,Foto studio Zenit,Fotografije venčanja,Ljubavna priča,Emocije venčanja,Fotografska galerija,Poseban dan,Venčane uspomene,Fotografisanje venčanja,Magija objektiva">
-	<Navigation />
 	<div class="wrapper">
 		<div class="heading-wrapper">
 			<h1>VENČANJA</h1>
@@ -32,8 +31,7 @@ keywords="Venčanja,Foto studio Zenit,Fotografije venčanja,Ljubavna priča,Emoc
 			}
 		</div>
 	</div>
-	<ContactForm />
-	<Footer />
+
 	
 </Layout>
 <style>
@@ -63,9 +61,9 @@ keywords="Venčanja,Foto studio Zenit,Fotografije venčanja,Ljubavna priča,Emoc
 	.heading-wrapper::before{
 		position: absolute;
 		content: '';
-		top: 0;
+		top: -1px;
 		right: 0;
-		bottom: 0;
+		bottom: -1px;
 		left: 0;
 		background:  #000000d5 ;
 

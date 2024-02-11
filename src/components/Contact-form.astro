@@ -91,11 +91,11 @@ const formActionUrl = import.meta.env.EMAIL_ACTION_URL
 				</p>
 				<h3>Pošaljite nam poruku!</h3>
 				<form id="my-form" action={formActionUrl} method="POST">
-					<label class="star">Ime i prezime:<span>*</span></label>
+					<label class="star" for="full-name">Ime i prezime:<span>*</span></label>
 					<input type="text" name="full-name" placeholder="npr. Petar Petrovic" required autocomplete="off" />
-					<label class="star">Email:<span>*</span></label>
+					<label class="star" for="email">Email:<span>*</span></label>
 					<input type="email" name="email" placeholder="npr. example@email.com" required autocomplete="off" />
-					<label class="star">Poruka:<span>*</span></label>
+					<label class="star" for="message">Poruka:<span>*</span></label>
 					<textarea class="message" name="message" required autocomplete="off"></textarea>
 					<p id="my-form-status"></p>
 					<button id="my-form-button"
@@ -120,6 +120,7 @@ const formActionUrl = import.meta.env.EMAIL_ACTION_URL
 				style="border:0;"
 				allowfullscreen=""
 				loading="lazy"
+				title="studio-zenit-iframe"
 				referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 	</div>

@@ -279,6 +279,12 @@
 	
 </style>
 <script>
+	window.onload = ()=>{
+		let navbar: any = document.getElementById('navbar');
+		if(window.scrollY > 5){
+			navbar.classList.add("scrolled")
+		}
+	}
 	window.onscroll = () => {
 		let navbar: any = document.getElementById("navbar");
 
@@ -294,14 +300,12 @@
 
 	document.addEventListener("DOMContentLoaded", () => {
 		let currentPage = window.location.pathname;
-		console.log(currentPage);
 		let navLinks = document.querySelectorAll("#side-menu a");
 		let navLinksDesktop = document.querySelectorAll(".links-wrapper a");
 		let gallery:any = document.getElementById('gallery');
 		let albums:any = document.getElementById('albums')
 		let galleryMobile:any = document.getElementById('gallery-mobile');
 		let albumsMobile:any = document.getElementById('albums-mobile')
-		console.log(navLinks);
 		navLinks.forEach((link) => {
 			if (link.getAttribute("href") === currentPage) {
 				link.classList.add("active");

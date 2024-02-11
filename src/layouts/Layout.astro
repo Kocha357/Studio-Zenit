@@ -93,7 +93,9 @@ const { title, description, keywords } = Astro.props;
 </style>
 <script>
   const loader: any = document.getElementById("loader");
+  document.body.classList.add('disable-scroll')
   window.addEventListener("load", () => {
     loader.style.display = "none";
+    document.body.classList.remove('disable-scroll')
   });
 </script>

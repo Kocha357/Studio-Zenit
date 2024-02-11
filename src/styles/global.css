@@ -34,3 +34,8 @@ body.disable-scroll {
 * {
   scrollbar-color: #808080 #f1f1f1; /* scrollbar handle and track colors */
 }
+a,img,summary{
+  -webkit-tap-highlight-color: transparent; /* Chrome, Safari, Edge */
+  -moz-tap-highlight-color: transparent; /* Firefox */
+  -o-tap-highlight-color: transparent; /* Opera */
+  }

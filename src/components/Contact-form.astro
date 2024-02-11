@@ -130,6 +130,7 @@ const formActionUrl = import.meta.env.EMAIL_ACTION_URL;
             >Ime i prezime:<span>*</span></label
           >
           <input
+            id="full-name"
             type="text"
             name="full-name"
             placeholder="npr. Petar Petrovic"
@@ -138,6 +139,7 @@ const formActionUrl = import.meta.env.EMAIL_ACTION_URL;
           />
           <label class="star" for="email">Email:<span>*</span></label>
           <input
+            id="email"
             type="email"
             name="email"
             placeholder="npr. example@email.com"
@@ -145,7 +147,7 @@ const formActionUrl = import.meta.env.EMAIL_ACTION_URL;
             autocomplete="off"
           />
           <label class="star" for="message">Poruka:<span>*</span></label>
-          <textarea class="message" name="message" required autocomplete="off"
+          <textarea id="message" class="message" name="message" required autocomplete="off"
           ></textarea>
           <p id="my-form-status"></p>
           <button id="my-form-button"

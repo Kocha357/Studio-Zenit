@@ -11,113 +11,125 @@ const apiUrl = import.meta.env.BIRTHDAY_PHOTOS_API_URL;
 const { imageInfoArray } = await fetchData(apiUrl, 0);
 ---
 
-<Layout title="Fotografije Osamnaestih rođendana | Foto studio Zenit" description="Fotografi za osamnaeste rođendane - Istražite naše fotografije osamnaestih rođendana, gde slavimo prelazak u svet odraslih. Svaka slika je priča, a svaki osmeh svedoči o radosti tog posebnog dana. Foto studio Zenit je tu da uhvati svaki dragoceni trenutak i pretvori ga u večna sećanja." 
-keywords="Osamnaesti rođendani,Foto studio Zenit,Slavlje osamnaestog rođendana,Osamnaestica,Fotografije proslave punoletstva,Odrastanje,Rođendanska galerija,Slike osamnaestog rođendana,Osmeh na rođendanu,Slavljenik punoletstva">
-	
-	<div class="wrapper">
-		
-		<div class="heading-wrapper">
-			<h1>OSAMNAESTI ROĐENDANI</h1>		
-			<p>Slavimo prekretnicu u životu - prelazak u svet odraslih! Na ovoj stranici, osamnaesti rođendan nije samo datum, već početak nove avanture, slobode i neograničenih mogućnosti. Spremni smo uhvatiti svaki dragoceni trenutak i pretvoriti ga u večna sećanja.Svaka slika je priča, a svaki osmeh svedoči o radosti tog posebnog dana. Naša misija je zabeležiti spontane trenutke i emocije koji čine osamnaesti rođendan nezaboravnim.</p>
-		</div>
-		<div class="content-wrapper" id="photoGrid">
-			{
-				imageInfoArray.map((img: any) => (
-					<div class="photo" style={`grid-row: ${img.aspectRatio === 'portrait' ? 'span 2' : 'span 1'}`}>
-						<Image imgUrl={img.imageUrl} imgAlt={img.imageAlt} width="100%" height="auto" />
-					</div>
-				))
-			}
-		</div>
-	</div>
-	
-	
+<Layout
+  title="Fotografije Osamnaestih rođendana | Foto studio Zenit"
+  description="Fotografi za osamnaeste rođendane - Istražite naše fotografije osamnaestih rođendana, gde slavimo prelazak u svet odraslih. Svaka slika je priča, a svaki osmeh svedoči o radosti tog posebnog dana. Foto studio Zenit je tu da uhvati svaki dragoceni trenutak i pretvori ga u večna sećanja."
+  keywords="Osamnaesti rođendani,Foto studio Zenit,Slavlje osamnaestog rođendana,Osamnaestica,Fotografije proslave punoletstva,Odrastanje,Rođendanska galerija,Slike osamnaestog rođendana,Osmeh na rođendanu,Slavljenik punoletstva"
+>
+  <div class="wrapper">
+    <div class="heading-wrapper">
+      <h1>OSAMNAESTI ROĐENDANI</h1>
+      <p>
+        Slavimo prekretnicu u životu - prelazak u svet odraslih! Na ovoj
+        stranici, osamnaesti rođendan nije samo datum, već početak nove
+        avanture, slobode i neograničenih mogućnosti. Spremni smo uhvatiti svaki
+        dragoceni trenutak i pretvoriti ga u večna sećanja.Svaka slika je priča,
+        a svaki osmeh svedoči o radosti tog posebnog dana. Naša misija je
+        zabeležiti spontane trenutke i emocije koji čine osamnaesti rođendan
+        nezaboravnim.
+      </p>
+    </div>
+    <div class="content-wrapper" id="photoGrid">
+      {
+        imageInfoArray.map((img: any) => (
+          <div
+            class="photo"
+            style={`grid-row: ${img.aspectRatio === "portrait" ? "span 2" : "span 1"}`}
+          >
+            <Image
+              imgUrl={img.imageUrl}
+              imgAlt={img.imageAlt}
+              width="100%"
+              height="auto"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </Layout>
 <style>
-	.heading-wrapper{
-		text-align: center;
-		background-image: url('/main-galery-section/18-bg.png');
-		background-repeat: no-repeat;
-		background-size: cover;		
-		background-position:center;
-		background-attachment: fixed;
-		position: relative;
-		width: 100%;
-		padding:100px 20px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		height: calc(100vh - 300px);
+  .heading-wrapper {
+    text-align: center;
+    background-image: url("/main-galery-section/18-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 300px);
+  }
+  @media screen and (max-width: 1300px) {
+    .heading-wrapper {
+      background-image: url("/main-galery-section/birthday2-bg.png");
+    }
+  }
+  .heading-wrapper::before {
+    position: absolute;
+    content: "";
+    top: -1px;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    background: #000000d5;
+  }
+  .heading-wrapper h1,
+  .heading-wrapper p {
+    position: relative;
+  }
 
-	}
-	@media screen and (max-width:1300px){
-		.heading-wrapper{
-			background-image: url('/main-galery-section/birthday2-bg.png');
-
-		}
-	}
-	.heading-wrapper::before{
-		position: absolute;
-		content: '';
-		top: -1px;
-		right: 0;
-		bottom: -1px;
-		left: 0;
-		background:  #000000d5 ;
-
-	}
-	.heading-wrapper h1,.heading-wrapper p{
-		position: relative;
-	}
-
-	.heading-wrapper p{
-		max-width: 1280px;
-		text-align: center;
-		color: rgb(255 255 255 /80%);
-
-	}
-	h2 {
-		color: #d9ad5e;
-	}
-	.active {
-		color: #d9ad5e;
-	}
-	.nav {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		place-items: baseline;
-		text-align: center;
-	}
-	@media screen and (max-width: 1280px) {
-		.nav {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-	.nav div {
-		padding: 20px;
-		text-transform: uppercase;
-	}
-	.wrapper {
-		margin-top: 100px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.content-wrapper {
-		width: 100%;
-		max-width: 1280px;
-		display: grid;
-		grid-template-columns: repeat(4, minmax(20%, 1fr));
-		margin: 40px 0;
-		column-gap: 5px;
-		row-gap: 5px;
-		padding: 20px;
-	}
-	@media screen and (max-width: 1280px) {
-		.content-wrapper {
-			grid-template-columns: repeat(3, minmax(30%, 1fr));
-		}
-	}
+  .heading-wrapper p {
+    max-width: 1280px;
+    text-align: center;
+    color: rgb(255 255 255 /80%);
+  }
+  h2 {
+    color: #d9ad5e;
+  }
+  .active {
+    color: #d9ad5e;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: baseline;
+    text-align: center;
+  }
+  @media screen and (max-width: 1280px) {
+    .nav {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .nav div {
+    padding: 20px;
+    text-transform: uppercase;
+  }
+  .wrapper {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(20%, 1fr));
+    margin: 40px 0;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 20px;
+  }
+  @media screen and (max-width: 1280px) {
+    .content-wrapper {
+      grid-template-columns: repeat(3, minmax(30%, 1fr));
+    }
+  }
 </style>

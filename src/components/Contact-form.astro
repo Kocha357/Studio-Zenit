@@ -1,323 +1,383 @@
 ---
-const formActionUrl = import.meta.env.EMAIL_ACTION_URL
+const formActionUrl = import.meta.env.EMAIL_ACTION_URL;
 ---
 
 <section class="content-wrapper">
-	<div class="map-and-form-wrap">
-		<div class="form-wrapper">
-			<div class="phanto-z-index">
-				<p class="info">
-					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"
-						><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-						></g><g id="SVGRepo_iconCarrier">
-							<path
-								d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-								stroke="#ffffff"
-								stroke-width="1.5"
-								stroke-linecap="round"
-								stroke-linejoin="round"></path>
-						</g></svg
-					>Ponedeljak-Petak: 10-18h
-				</p>
-				<p class="info">
-					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"
-						><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-						></g><g id="SVGRepo_iconCarrier">
-							<path
-								d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z"
-								stroke="#ffffff"
-								stroke-width="1.5"></path>
-							<path
-								d="M6 8L8.1589 9.79908C9.99553 11.3296 10.9139 12.0949 12 12.0949C13.0861 12.0949 14.0045 11.3296 15.8411 9.79908L18 8"
-								stroke="#ffffff"
-								stroke-width="1.5"
-								stroke-linecap="round"></path>
-						</g></svg
-					><a href="mailTo:fotostudiozenit@gmail.com">fotostudiozenit@gmail.com</a>
-				</p>
-				<p class="info">
-					<svg width="64px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"
-						><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-						></g><g id="SVGRepo_iconCarrier">
-							<path
-								d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
-								stroke="#ffffff"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"></path>
-						</g></svg
-					>
-					<a href="tel:+381654026000">065-402-6000</a>
-				</p>
-				<p class="info">
-					<svg
-						fill="#ffffff"
-						version="1.1"
-						id="Layer_1"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						viewBox="0 0 169.063 169.063"
-						xml:space="preserve"
-						stroke="#ffffff"
-						><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-						></g><g id="SVGRepo_iconCarrier">
-							<g>
-								<path
-									stroke-width="1"
-									d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752 c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407 c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752 c17.455,0,31.656,14.201,31.656,31.655V122.407z"
-								></path>
-								<path
-									stroke-width="1"
-									d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561 C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561 c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"
-								></path>
-								<path
-									stroke-width="1"
-									d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78 c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78 C135.661,29.421,132.821,28.251,129.921,28.251z"
-								></path>
-							</g>
-						</g></svg
-					><a href="https://www.instagram.com/fotostudiozenit?igsh=Ymp1ODM4bHI2aThz">@fotostudiozenit</a>
-				</p>
-				<p class="info">
-					<svg viewBox="0 0 1024 1024" fill="#ffffff" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"
-						><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-						></g><g id="SVGRepo_iconCarrier"
-							><path
-								stroke-width="1.5"
-								d="M512 1012.8c-253.6 0-511.2-54.4-511.2-158.4 0-92.8 198.4-131.2 283.2-143.2h3.2c12 0 22.4 8.8 24 20.8 0.8 6.4-0.8 12.8-4.8 17.6-4 4.8-9.6 8.8-16 9.6-176.8 25.6-242.4 72-242.4 96 0 44.8 180.8 110.4 463.2 110.4s463.2-65.6 463.2-110.4c0-24-66.4-70.4-244.8-96-6.4-0.8-12-4-16-9.6-4-4.8-5.6-11.2-4.8-17.6 1.6-12 12-20.8 24-20.8h3.2c85.6 12 285.6 50.4 285.6 143.2 0.8 103.2-256 158.4-509.6 158.4z m-16.8-169.6c-12-11.2-288.8-272.8-288.8-529.6 0-168 136.8-304.8 304.8-304.8S816 145.6 816 313.6c0 249.6-276.8 517.6-288.8 528.8l-16 16-16-15.2zM512 56.8c-141.6 0-256.8 115.2-256.8 256.8 0 200.8 196 416 256.8 477.6 61.6-63.2 257.6-282.4 257.6-477.6C768.8 172.8 653.6 56.8 512 56.8z m0 392.8c-80 0-144.8-64.8-144.8-144.8S432 160 512 160c80 0 144.8 64.8 144.8 144.8 0 80-64.8 144.8-144.8 144.8zM512 208c-53.6 0-96.8 43.2-96.8 96.8S458.4 401.6 512 401.6c53.6 0 96.8-43.2 96.8-96.8S564.8 208 512 208z"
-								fill=""></path></g
-						></svg
-					>Ive Andrića 1a, Bajina Bašta
-				</p>
-				<h3>Pošaljite nam poruku!</h3>
-				<form id="my-form" action={formActionUrl} method="POST">
-					<label class="star" for="full-name">Ime i prezime:<span>*</span></label>
-					<input type="text" name="full-name" placeholder="npr. Petar Petrovic" required autocomplete="off" />
-					<label class="star" for="email">Email:<span>*</span></label>
-					<input type="email" name="email" placeholder="npr. example@email.com" required autocomplete="off" />
-					<label class="star" for="message">Poruka:<span>*</span></label>
-					<textarea class="message" name="message" required autocomplete="off"></textarea>
-					<p id="my-form-status"></p>
-					<button id="my-form-button"
-						><svg fill="#d9ad5e" width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-							><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-							></g><g id="SVGRepo_iconCarrier">
-								<title>paper-plane</title>
-								<path
-									d="M31.117 1.445c-0.009-0.018-0.026-0.029-0.036-0.046-0.069-0.131-0.155-0.243-0.258-0.338l-0.001-0.001c-0.028-0.019-0.063-0.039-0.098-0.057l-0.007-0.003c-0.021-0.015-0.029-0.043-0.052-0.057-0.030-0.019-0.067-0.013-0.099-0.030-0.131-0.071-0.285-0.12-0.448-0.136l-0.005-0c-0.035-0.007-0.079-0.013-0.123-0.016l-0.004-0c-0.211 0.001-0.409 0.055-0.582 0.15l0.006-0.003c-0.010 0.005-0.022 0.002-0.032 0.008l-27.999 16c-0.379 0.219-0.63 0.623-0.63 1.085 0 0.5 0.294 0.932 0.719 1.132l0.008 0.003 9.273 4.28v6.585c0 0.473 0.263 0.884 0.65 1.096l0.007 0.003c0.172 0.095 0.376 0.15 0.594 0.15 0.255 0 0.492-0.077 0.69-0.208l-0.005 0.003 6.027-3.955 8.764 4.045c0.153 0.072 0.333 0.115 0.523 0.115 0.659 0 1.198-0.509 1.246-1.156l0-0.004 2-28.001c0.002-0.023-0.013-0.042-0.013-0.065 0.001-0.016 0.001-0.035 0.001-0.054 0-0.191-0.043-0.372-0.121-0.533l0.003 0.007zM24.16 6.777l-12.511 14.3-6.922-3.195zM13.25 27.686v-3.117l2.788 1.287zM26.883 28.107l-7.663-3.537c-0.026-0.014-0.038-0.042-0.065-0.055l-5.115-2.373 14.448-16.514z"
-								></path>
-							</g></svg
-						>Pošalji poruku</button
-					>
-				</form>
-			</div>
-		</div>
-		<div class="google-map">
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9657.723641962355!2d19.572963943567846!3d43.974705170709704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759b67950d4ea95%3A0xd1e9a648d4570f6b!2sIve%20Andri%C4%87a%201%2C%20Bajina%20Ba%C5%A1ta!5e0!3m2!1sen!2srs!4v1705157048949!5m2!1sen!2srs"
-				width="100%"
-				height="100%"
-				style="border:0;"
-				allowfullscreen=""
-				loading="lazy"
-				title="studio-zenit-iframe"
-				referrerpolicy="no-referrer-when-downgrade"></iframe>
-		</div>
-	</div>
+  <div class="map-and-form-wrap">
+    <div class="form-wrapper">
+      <div class="phanto-z-index">
+        <p class="info">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#ffffff"
+            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+              <path
+                d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </g></svg
+          >Ponedeljak-Petak: 10-18h
+        </p>
+        <p class="info">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#ffffff"
+            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+              <path
+                d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z"
+                stroke="#ffffff"
+                stroke-width="1.5"></path>
+              <path
+                d="M6 8L8.1589 9.79908C9.99553 11.3296 10.9139 12.0949 12 12.0949C13.0861 12.0949 14.0045 11.3296 15.8411 9.79908L18 8"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"></path>
+            </g></svg
+          ><a href="mailTo:fotostudiozenit@gmail.com"
+            >fotostudiozenit@gmail.com</a
+          >
+        </p>
+        <p class="info">
+          <svg
+            width="64px"
+            height="20px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#ffffff"
+            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+              <path
+                d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                stroke="#ffffff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </g></svg
+          >
+          <a href="tel:+381654026000">065-402-6000</a>
+        </p>
+        <p class="info">
+          <svg
+            fill="#ffffff"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 169.063 169.063"
+            xml:space="preserve"
+            stroke="#ffffff"
+            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+              <g>
+                <path
+                  stroke-width="1"
+                  d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752 c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407 c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752 c17.455,0,31.656,14.201,31.656,31.655V122.407z"
+                ></path>
+                <path
+                  stroke-width="1"
+                  d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561 C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561 c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"
+                ></path>
+                <path
+                  stroke-width="1"
+                  d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78 c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78 C135.661,29.421,132.821,28.251,129.921,28.251z"
+                ></path>
+              </g>
+            </g></svg
+          ><a
+            href="https://www.instagram.com/fotostudiozenit?igsh=Ymp1ODM4bHI2aThz"
+            >@fotostudiozenit</a
+          >
+        </p>
+        <p class="info">
+          <svg
+            viewBox="0 0 1024 1024"
+            fill="#ffffff"
+            class="icon"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#ffffff"
+            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
+              ><path
+                stroke-width="1.5"
+                d="M512 1012.8c-253.6 0-511.2-54.4-511.2-158.4 0-92.8 198.4-131.2 283.2-143.2h3.2c12 0 22.4 8.8 24 20.8 0.8 6.4-0.8 12.8-4.8 17.6-4 4.8-9.6 8.8-16 9.6-176.8 25.6-242.4 72-242.4 96 0 44.8 180.8 110.4 463.2 110.4s463.2-65.6 463.2-110.4c0-24-66.4-70.4-244.8-96-6.4-0.8-12-4-16-9.6-4-4.8-5.6-11.2-4.8-17.6 1.6-12 12-20.8 24-20.8h3.2c85.6 12 285.6 50.4 285.6 143.2 0.8 103.2-256 158.4-509.6 158.4z m-16.8-169.6c-12-11.2-288.8-272.8-288.8-529.6 0-168 136.8-304.8 304.8-304.8S816 145.6 816 313.6c0 249.6-276.8 517.6-288.8 528.8l-16 16-16-15.2zM512 56.8c-141.6 0-256.8 115.2-256.8 256.8 0 200.8 196 416 256.8 477.6 61.6-63.2 257.6-282.4 257.6-477.6C768.8 172.8 653.6 56.8 512 56.8z m0 392.8c-80 0-144.8-64.8-144.8-144.8S432 160 512 160c80 0 144.8 64.8 144.8 144.8 0 80-64.8 144.8-144.8 144.8zM512 208c-53.6 0-96.8 43.2-96.8 96.8S458.4 401.6 512 401.6c53.6 0 96.8-43.2 96.8-96.8S564.8 208 512 208z"
+                fill=""></path></g
+            ></svg
+          >Ive Andrića 1a, Bajina Bašta
+        </p>
+        <h3>Pošaljite nam poruku!</h3>
+        <form id="my-form" action={formActionUrl} method="POST">
+          <label class="star" for="full-name"
+            >Ime i prezime:<span>*</span></label
+          >
+          <input
+            type="text"
+            name="full-name"
+            placeholder="npr. Petar Petrovic"
+            required
+            autocomplete="off"
+          />
+          <label class="star" for="email">Email:<span>*</span></label>
+          <input
+            type="email"
+            name="email"
+            placeholder="npr. example@email.com"
+            required
+            autocomplete="off"
+          />
+          <label class="star" for="message">Poruka:<span>*</span></label>
+          <textarea class="message" name="message" required autocomplete="off"
+          ></textarea>
+          <p id="my-form-status"></p>
+          <button id="my-form-button"
+            ><svg
+              fill="#d9ad5e"
+              width="64px"
+              height="64px"
+              viewBox="0 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <title>paper-plane</title>
+                <path
+                  d="M31.117 1.445c-0.009-0.018-0.026-0.029-0.036-0.046-0.069-0.131-0.155-0.243-0.258-0.338l-0.001-0.001c-0.028-0.019-0.063-0.039-0.098-0.057l-0.007-0.003c-0.021-0.015-0.029-0.043-0.052-0.057-0.030-0.019-0.067-0.013-0.099-0.030-0.131-0.071-0.285-0.12-0.448-0.136l-0.005-0c-0.035-0.007-0.079-0.013-0.123-0.016l-0.004-0c-0.211 0.001-0.409 0.055-0.582 0.15l0.006-0.003c-0.010 0.005-0.022 0.002-0.032 0.008l-27.999 16c-0.379 0.219-0.63 0.623-0.63 1.085 0 0.5 0.294 0.932 0.719 1.132l0.008 0.003 9.273 4.28v6.585c0 0.473 0.263 0.884 0.65 1.096l0.007 0.003c0.172 0.095 0.376 0.15 0.594 0.15 0.255 0 0.492-0.077 0.69-0.208l-0.005 0.003 6.027-3.955 8.764 4.045c0.153 0.072 0.333 0.115 0.523 0.115 0.659 0 1.198-0.509 1.246-1.156l0-0.004 2-28.001c0.002-0.023-0.013-0.042-0.013-0.065 0.001-0.016 0.001-0.035 0.001-0.054 0-0.191-0.043-0.372-0.121-0.533l0.003 0.007zM24.16 6.777l-12.511 14.3-6.922-3.195zM13.25 27.686v-3.117l2.788 1.287zM26.883 28.107l-7.663-3.537c-0.026-0.014-0.038-0.042-0.065-0.055l-5.115-2.373 14.448-16.514z"
+                ></path>
+              </g></svg
+            >Pošalji poruku</button
+          >
+        </form>
+      </div>
+    </div>
+    <div class="google-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9657.723641962355!2d19.572963943567846!3d43.974705170709704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759b67950d4ea95%3A0xd1e9a648d4570f6b!2sIve%20Andri%C4%87a%201%2C%20Bajina%20Ba%C5%A1ta!5e0!3m2!1sen!2srs!4v1705157048949!5m2!1sen!2srs"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        title="studio-zenit-iframe"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
 </section>
 <style>
-	h2 {
-		color: #d9ad5e;
-		text-align: center;
-		padding: 10px;
-	}
-	h3 {
-		color: #d9ad5e;
-		min-width: 250px;
-		width: 80%;
-		margin: 20px auto 0 auto;
-	}
+  h2 {
+    color: #d9ad5e;
+    text-align: center;
+    padding: 10px;
+  }
+  h3 {
+    color: #d9ad5e;
+    min-width: 250px;
+    width: 80%;
+    margin: 20px auto 0 auto;
+  }
 
-	.content-wrapper {
-		width: 100%;
-		display: flex;
-		height: fit-content;
-		align-items: center;
-		flex-direction: column;
-		font-family: "Courier New", Courier, monospace;
-		max-width: 1280px;
-		font-weight: 600;
-		margin: 0 auto auto auto;
-	}
-	.form-wrapper {
-		background-image: url("/hero-photo/email-background.png");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.form-wrapper::before {
-		content: "";
-		position: absolute;
-		top: -1px;
-		bottom: -1px;
-		left: 0;
-		right: 0;
-		background: #000000b0;
-	}
-	.phanto-z-index {
-		position: relative;
-		z-index: 3;
-		width: 100%;
-	}
-	.map-and-form-wrap {
-		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media screen and (max-width: 1280px) {
-		.map-and-form-wrap {
-			grid-template-columns: 1fr;
-		}
-	}
+  .content-wrapper {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Courier New", Courier, monospace;
+    max-width: 1280px;
+    font-weight: 600;
+    margin: 0 auto auto auto;
+  }
+  .form-wrapper {
+    background-image: url("/hero-photo/email-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    background: #000000b0;
+  }
+  .phanto-z-index {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+  }
+  .map-and-form-wrap {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 1280px) {
+    .map-and-form-wrap {
+      grid-template-columns: 1fr;
+    }
+  }
 
-	#my-form {
-		width: 100%;
-		display: flex;
-		justify-content: start;
-		flex-direction: column;
-	}
-	input {
-		border: none;
-		background-color: #242424;
-		height: 40px;
-		border-radius: 8px;
-		padding-left: 5px;
-		border: 1px solid #d9ad5e;
-		min-width: 250px;
-		width: 80%;
-		margin: 0 auto;
-		color: rgb(255 255 255 / 58%) !important;
-		outline: none;
-	}
+  #my-form {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+  }
+  input {
+    border: none;
+    background-color: #242424;
+    height: 40px;
+    border-radius: 8px;
+    padding-left: 5px;
+    border: 1px solid #d9ad5e;
+    min-width: 250px;
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(255 255 255 / 58%) !important;
+    outline: none;
+  }
 
-	.message {
-		border: none;
-		background-color: #242424;
-		border-radius: 8px;
-		padding-left: 5px;
-		border: 1px solid #d9ad5e;
-		min-width: 250px;
-		width: 80%;
-		resize: none;
-		height: 200px;
-		margin: 0 auto;
-		outline: none;
-		color: rgb(255 255 255 / 58%);
-	}
-	label {
-		min-width: 250px;
-		width: 80%;
-		color: rgb(255 255 255 / 58%);
-		text-align: start;
-		margin: 10px auto;
-	}
-	label span {
-		color: red;
-	}
-	#my-form-status {
-		color: green;
-		min-width: 250px;
-		width: 80%;
-		margin: 0 auto;
-	}
-	.google-map {
-		width: 100%;
-		height: 100%;
-	}
-	@media screen and (max-width: 1280px) {
-		.google-map {
-			height: 50vh;
-		}
-	}
-	#my-form-button {
-		width: 150px;
-		height: 40px;
-		border: none;
-		outline: none;
-		color: #d9ad5e;
-		background: #242424;
-		border: 1px solid #d9ad5e;
-		border-radius: 8px;
-		margin: 20px auto;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 5px;
-	}
-	#my-form-button svg {
-		width: 20px;
-	}
-	.info svg {
-		width: 20px;
-	}
-	.info {
-		color: rgb(255 255 255 / 58%);
-		display: flex;
-		align-items: center;
-		gap: 5px;
-		min-width: 250px;
-		width: 80%;
-		margin: 10px auto;
-		padding: 3px 0;
-	}
-	.info a {
-		text-decoration: none;
-		outline: none;
-		color: rgb(255 255 255 / 58%);
-	}
+  .message {
+    border: none;
+    background-color: #242424;
+    border-radius: 8px;
+    padding-left: 5px;
+    border: 1px solid #d9ad5e;
+    min-width: 250px;
+    width: 80%;
+    resize: none;
+    height: 200px;
+    margin: 0 auto;
+    outline: none;
+    color: rgb(255 255 255 / 58%);
+  }
+  label {
+    min-width: 250px;
+    width: 80%;
+    color: rgb(255 255 255 / 58%);
+    text-align: start;
+    margin: 10px auto;
+  }
+  label span {
+    color: red;
+  }
+  #my-form-status {
+    color: green;
+    min-width: 250px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .google-map {
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width: 1280px) {
+    .google-map {
+      height: 50vh;
+    }
+  }
+  #my-form-button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #d9ad5e;
+    background: #242424;
+    border: 1px solid #d9ad5e;
+    border-radius: 8px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  #my-form-button svg {
+    width: 20px;
+  }
+  .info svg {
+    width: 20px;
+  }
+  .info {
+    color: rgb(255 255 255 / 58%);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-width: 250px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 3px 0;
+  }
+  .info a {
+    text-decoration: none;
+    outline: none;
+    color: rgb(255 255 255 / 58%);
+  }
 </style>
 <script>
-	let form: any = document.getElementById("my-form");
+  let form: any = document.getElementById("my-form");
 
-	async function handleSubmit(event: any) {
-		event.preventDefault();
+  async function handleSubmit(event: any) {
+    event.preventDefault();
 
-		let status: any = document.getElementById("my-form-status");
-		let data: any = new FormData(event.target);
-		fetch(event.target.action, {
-			method: form.method,
-			body: data,
-			headers: {
-				Accept: "application/json",
-			},
-		})
-			.then((response) => {
-				if (response.ok) {
-					status.innerHTML = "Poruka uspešno poslata!";
-					form.reset();
-					setTimeout(() => {
-						status.style.display = "none";
-					}, 5000);
-				} else {
-					response.json().then((data) => {
-						if (Object.hasOwn(data, "errors")) {
-							status.innerHTML = data["errors"].map((error: any) => error["message"]).join(", ");
-							status.style.color = "red";
-						} else {
-							status.innerHTML = "Došlo je do greške! Email nije poslat.";
-							status.style.color = "red";
-						}
-					});
-				}
-			})
-			.catch((error) => {
-				status.innerHTML = "Došlo je do greške! Email nije poslat.";
-				status.style.color = "red";
-			});
-	}
-	form.addEventListener("submit", handleSubmit);
+    let status: any = document.getElementById("my-form-status");
+    let data: any = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          status.innerHTML = "Poruka uspešno poslata!";
+          form.reset();
+          setTimeout(() => {
+            status.style.display = "none";
+          }, 5000);
+        } else {
+          response.json().then((data) => {
+            if (Object.hasOwn(data, "errors")) {
+              status.innerHTML = data["errors"]
+                .map((error: any) => error["message"])
+                .join(", ");
+              status.style.color = "red";
+            } else {
+              status.innerHTML = "Došlo je do greške! Email nije poslat.";
+              status.style.color = "red";
+            }
+          });
+        }
+      })
+      .catch((error) => {
+        status.innerHTML = "Došlo je do greške! Email nije poslat.";
+        status.style.color = "red";
+      });
+  }
+  form.addEventListener("submit", handleSubmit);
 </script>

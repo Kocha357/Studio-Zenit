@@ -11,79 +11,87 @@ const apiUrl = import.meta.env.FIRST_ALBUM_API_URL;
 const { albums } = await fetchAlbums(apiUrl);
 ---
 
-<Layout title="Albumi 1.rođendani | Foto studio Zenit" description="Izrada albuma sa fotografijama - Istražite naše prelepe albume prvih rođendana, gde svaka slika nosi sa sobom čaroliju detinjstva, osmehe i neizmernu ljubav. Naši albumi prvih rođendana beleže svaki nežan trenutak, pretvarajući ih u večna sećanja. Foto studio Zenit je tu da zabeleži prve korake, osmehe i čaroliju prvih rođendana vašeg deteta." 
-keywords="Albumi 1. rođendani,Prvi rođendan albumi,Foto albumi prvih rođendana,Fotografije prvog rođendana,Specijalni albumi za prvi rođendan,Prvi rođendan galerija,Foto sesije za prvi rođendan,Rođendanski albumi sa godinu dana,Prvi rođendanski portreti,Albumi detinjstva">
-	
-	<div class="wrapper">
-		<h1>ALBUMI PRVIH ROĐENDANA</h1>
-		{
-			albums.map((album: any) => (
-				<>
-					<h2>{album.headingText}</h2>
-					<div class="content-wrapper" id="photoGrid">
-						{album.images.map((img: any) => (
-							<div class="photo" style={`grid-row: ${img.aspectRatio === 'portrait' ? 'span 2' : 'span 1'}`}>
-								<Image imgUrl={img.imageUrl} imgAlt={img.imageAlt} width="100%" height="auto" />
-							</div>
-						))}
-					</div>
-				</>
-			))
-		}
-	</div>
-	
-	
+<Layout
+  title="Albumi 1.rođendani | Foto studio Zenit"
+  description="Izrada albuma sa fotografijama - Istražite naše prelepe albume prvih rođendana, gde svaka slika nosi sa sobom čaroliju detinjstva, osmehe i neizmernu ljubav. Naši albumi prvih rođendana beleže svaki nežan trenutak, pretvarajući ih u večna sećanja. Foto studio Zenit je tu da zabeleži prve korake, osmehe i čaroliju prvih rođendana vašeg deteta."
+  keywords="Albumi 1. rođendani,Prvi rođendan albumi,Foto albumi prvih rođendana,Fotografije prvog rođendana,Specijalni albumi za prvi rođendan,Prvi rođendan galerija,Foto sesije za prvi rođendan,Rođendanski albumi sa godinu dana,Prvi rođendanski portreti,Albumi detinjstva"
+>
+  <div class="wrapper">
+    <h1>ALBUMI PRVIH ROĐENDANA</h1>
+    {
+      albums.map((album: any) => (
+        <>
+          <h2>{album.headingText}</h2>
+          <div class="content-wrapper" id="photoGrid">
+            {album.images.map((img: any) => (
+              <div
+                class="photo"
+                style={`grid-row: ${img.aspectRatio === "portrait" ? "span 2" : "span 1"}`}
+              >
+                <Image
+                  imgUrl={img.imageUrl}
+                  imgAlt={img.imageAlt}
+                  width="100%"
+                  height="auto"
+                />
+              </div>
+            ))}
+          </div>
+        </>
+      ))
+    }
+  </div>
 </Layout>
 <style>
-	h2 {
-		color: #d9ad5e;
-		width: 100%;
-		max-width: 1280px;
-		border-bottom: 1px solid #d9ad5e;
-		padding: 10px 20px;
-	}
+  h2 {
+    color: #d9ad5e;
+    width: 100%;
+    max-width: 1280px;
+    border-bottom: 1px solid #d9ad5e;
+    padding: 10px 20px;
+  }
 
-	.active {
-		color: #d9ad5e;
-	}
-	.nav {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		place-items: baseline;
-		text-align: center;
-	}
-	@media screen and (max-width: 1280px) {
-		.nav {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		h2 {
-			text-align: center;
-		}
-	}
-	.nav div {
-		padding: 20px;
-		text-transform: uppercase;
-	}
-	.wrapper {
-		margin-top: 100px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.content-wrapper {
-		width: 100%;
-		max-width: 1280px;
-		display: grid;
-		grid-template-columns: repeat(5, minmax(15%, 1fr));
-		margin: 10px 0;
-		column-gap: 5px;
-		row-gap: 5px;
-		padding: 0 20px;
-	}
-	@media screen and (max-width: 1280px) {
-		.content-wrapper {
-			grid-template-columns: repeat(3, minmax(30%, 1fr));
-		}
-	}
+  .active {
+    color: #d9ad5e;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: baseline;
+    text-align: center;
+  }
+  @media screen and (max-width: 1280px) {
+    .nav {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+  .nav div {
+    padding: 20px;
+    text-transform: uppercase;
+  }
+  .wrapper {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(15%, 1fr));
+    margin: 10px 0;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 1280px) {
+    .content-wrapper {
+      grid-template-columns: repeat(3, minmax(30%, 1fr));
+    }
+  }
 </style>

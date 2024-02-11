@@ -4,9 +4,9 @@ import Navigation from "../components/Navigation.astro";
 import ContactForm from "../components/Contact-form.astro";
 import Footer from "../components/Footer.astro";
 interface Props {
-	title: string;
-	description: string;
-	keywords: string;
+  title: string;
+  description: string;
+  keywords: string;
 }
 
 const { title, description, keywords } = Astro.props;
@@ -14,92 +14,86 @@ const { title, description, keywords } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="keywords" content={keywords} />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href={globalCss.default} />
-		<!-- Place this in the <head> section of your HTML document -->
-<link rel="icon" href="/Logos/favicon.png" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href={globalCss.default} />
+    <!-- Place this in the <head> section of your HTML document -->
+    <link rel="icon" href="/Logos/favicon.png" type="image/png" />
 
-		<title>{title}</title>
-	
-	</head>
-	<body>
-		<div id="loader">
-			<img src="/Logos/zlatan-kis-i-slova.png" alt="Foto studio zenit logo">
-			<div class="loading">
-				<div class="animated-element"></div>
-			</div>
-		</div>
-		<Navigation/>
-		<div class="slot-wrapp">
-
-			<slot />
-		</div>
-		<ContactForm/>
-		<Footer/>
-	</body>
+    <title>{title}</title>
+  </head>
+  <body>
+    <div id="loader">
+      <img src="/Logos/zlatan-kis-i-slova.png" alt="Foto studio zenit logo" />
+      <div class="loading">
+        <div class="animated-element"></div>
+      </div>
+    </div>
+    <Navigation />
+    <div class="slot-wrapp">
+      <slot />
+    </div>
+    <ContactForm />
+    <Footer />
+  </body>
 </html>
 <style>
-	body{
-		position: relative;
-	}
-	#loader{
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: 100000;
-		background: linear-gradient(to bottom, #121315, #000000 50%, #121315 100%);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-
-	}
-	.loading{
-		width: 60%;
-		height: 100px;
-		display: flex;
-		overflow: hidden;
-
-	}
-	.animated-element{
-		background-color: #d9ad5e;
-		width: 60px;
-		height: 5px;
-		animation: loader-animation 1s linear infinite;
-	}
-	#loader img{
-		width: 250px;
-
-	}
-	@keyframes loader-animation{
-		0% {
-    transform: translateX(0); /* Start position */
+  body {
+    position: relative;
   }
-  100% {
-    transform: translateX(60vw); /* End position */
+  #loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+    background: linear-gradient(to bottom, #121315, #000000 50%, #121315 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-}
-.slot-wrapp{
-	position: relative;
-	margin-bottom: 20px;
-}
-@media screen and (max-width:1280px){
-	.slot-wrapp{
-		margin-bottom: 0;
-	}
-}
-	
+  .loading {
+    width: 60%;
+    height: 100px;
+    display: flex;
+    overflow: hidden;
+  }
+  .animated-element {
+    background-color: #d9ad5e;
+    width: 60px;
+    height: 5px;
+    animation: loader-animation 1s linear infinite;
+  }
+  #loader img {
+    width: 250px;
+  }
+  @keyframes loader-animation {
+    0% {
+      transform: translateX(0); /* Start position */
+    }
+    100% {
+      transform: translateX(60vw); /* End position */
+    }
+  }
+  .slot-wrapp {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 1280px) {
+    .slot-wrapp {
+      margin-bottom: 0;
+    }
+  }
 </style>
 <script>
-	const loader:any = document.getElementById('loader');
-	window.addEventListener('load',()=>{
-		loader.style.display = 'none'
-	})
+  const loader: any = document.getElementById("loader");
+  window.addEventListener("load", () => {
+    loader.style.display = "none";
+  });
 </script>

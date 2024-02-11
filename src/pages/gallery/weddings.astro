@@ -11,114 +11,127 @@ const apiUrl = import.meta.env.WEDDING_PHOTOS_API_URL;
 const { imageInfoArray } = await fetchData(apiUrl, 0);
 ---
 
-<Layout title="Fotografije Venčanja | Foto studio Zenit" description="Fotografi za venčanja - Izdvajamo posebne trenutke venčanja kroz naše fotografije koje oživljavaju svaki detalj i emociju. Foto studio Zenit je tu da zabeleži vašu ljubavnu priču kroz magiju objektiva. Pogledajte našu galeriju venčanja i pronađite inspiraciju za svoj poseban dan." 
-keywords="Venčanja,Foto studio Zenit,Fotografije venčanja,Ljubavna priča,Emocije venčanja,Fotografska galerija,Poseban dan,Venčane uspomene,Fotografisanje venčanja,Magija objektiva">
-	<div class="wrapper">
-		<div class="heading-wrapper">
-			<h1>VENČANJA</h1>
-			<p>Gde god se pogleda, svaki kadar postaje priča, a svaki trenutak se pretvara u večnost. Ovde, svaka fotografija nije samo snimak, već ljubavna priča ispričana kroz magiju objektiva. Duboko smo zahvalni što delite s nama deo vašeg jedinstvenog putovanja kroz ljubav i radosti venčanja.
+<Layout
+  title="Fotografije Venčanja | Foto studio Zenit"
+  description="Fotografi za venčanja - Izdvajamo posebne trenutke venčanja kroz naše fotografije koje oživljavaju svaki detalj i emociju. Foto studio Zenit je tu da zabeleži vašu ljubavnu priču kroz magiju objektiva. Pogledajte našu galeriju venčanja i pronađite inspiraciju za svoj poseban dan."
+  keywords="Venčanja,Foto studio Zenit,Fotografije venčanja,Ljubavna priča,Emocije venčanja,Fotografska galerija,Poseban dan,Venčane uspomene,Fotografisanje venčanja,Magija objektiva"
+>
+  <div class="wrapper">
+    <div class="heading-wrapper">
+      <h1>VENČANJA</h1>
+      <p>
+        Gde god se pogleda, svaki kadar postaje priča, a svaki trenutak se
+        pretvara u večnost. Ovde, svaka fotografija nije samo snimak, već
+        ljubavna priča ispričana kroz magiju objektiva. Duboko smo zahvalni što
+        delite s nama deo vašeg jedinstvenog putovanja kroz ljubav i radosti
+        venčanja. Hvala vam na dozvoli da budemo svedoci i kustosi vaših
+        najposebnijih trenutaka. Ova galerija nije samo mesto gde se slike
+        čuvaju; to je živi spomenik vašoj ljubavi, svedočanstvo o vašem
+        jedinstvenom putovanju.
+      </p>
+    </div>
 
-				Hvala vam na dozvoli da budemo svedoci i kustosi vaših najposebnijih trenutaka. Ova galerija nije samo mesto gde se slike čuvaju; to je živi spomenik vašoj ljubavi, svedočanstvo o vašem jedinstvenom putovanju.</p>
-		</div>
-
-		<div class="content-wrapper" id="photoGrid">
-			{
-				imageInfoArray.map((img: any) => (
-					<div class="photo" style={`grid-row: ${img.aspectRatio === 'portrait' ? 'span 2' : 'span 1'}`}>
-						<Image imgUrl={img.imageUrl} imgAlt={img.imageAlt} width="100%" height="auto" />
-					</div>
-				))
-			}
-		</div>
-	</div>
-
-	
+    <div class="content-wrapper" id="photoGrid">
+      {
+        imageInfoArray.map((img: any) => (
+          <div
+            class="photo"
+            style={`grid-row: ${img.aspectRatio === "portrait" ? "span 2" : "span 1"}`}
+          >
+            <Image
+              imgUrl={img.imageUrl}
+              imgAlt={img.imageAlt}
+              width="100%"
+              height="auto"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </Layout>
 <style>
-	.heading-wrapper{
-		text-align: center;
-		background-image: url('/main-galery-section/weddings-bg.png');
-		background-repeat: no-repeat;
-		background-size: cover;		
-		background-position:center;
-		background-attachment: fixed;
-		position: relative;
-		width: 100%;
-		padding:100px 20px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		height: calc(100vh - 300px);
+  .heading-wrapper {
+    text-align: center;
+    background-image: url("/main-galery-section/weddings-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 300px);
+  }
+  @media screen and (max-width: 1300px) {
+    .heading-wrapper {
+      background-image: url("/main-galery-section/weddings-bg-mobile.png");
+    }
+  }
+  .heading-wrapper::before {
+    position: absolute;
+    content: "";
+    top: -1px;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    background: #000000d5;
+  }
+  .heading-wrapper h1,
+  .heading-wrapper p {
+    position: relative;
+  }
 
-	}
-	@media screen and (max-width:1300px){
-		.heading-wrapper{
-			background-image: url('/main-galery-section/weddings-bg-mobile.png');
-
-		}
-	}
-	.heading-wrapper::before{
-		position: absolute;
-		content: '';
-		top: -1px;
-		right: 0;
-		bottom: -1px;
-		left: 0;
-		background:  #000000d5 ;
-
-	}
-	.heading-wrapper h1,.heading-wrapper p{
-		position: relative;
-	}
-
-	.heading-wrapper p{
-		max-width: 1280px;
-		text-align: center;
-		color: rgb(255 255 255 /80%);
-
-	}
-	h2 {
-		color: #d9ad5e;
-	}
-	.active {
-		color: #d9ad5e;
-	}
-	.nav {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		place-items: baseline;
-		text-align: center;
-	}
-	@media screen and (max-width: 1280px) {
-		.nav {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-	.nav div {
-		padding: 20px;
-		text-transform: uppercase;
-	}
-	.wrapper {
-		margin-top: 100px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.content-wrapper {
-		width: 100%;
-		max-width: 1280px;
-		display: grid;
-		grid-template-columns: repeat(5, minmax(15%, 1fr));
-		margin: 40px 0;
-		column-gap: 5px;
-		row-gap: 5px;
-		padding: 20px;
-	}
-	@media screen and (max-width: 1280px) {
-		.content-wrapper {
-			grid-template-columns: repeat(3, minmax(30%, 1fr));
-		}
-	}
+  .heading-wrapper p {
+    max-width: 1280px;
+    text-align: center;
+    color: rgb(255 255 255 /80%);
+  }
+  h2 {
+    color: #d9ad5e;
+  }
+  .active {
+    color: #d9ad5e;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: baseline;
+    text-align: center;
+  }
+  @media screen and (max-width: 1280px) {
+    .nav {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .nav div {
+    padding: 20px;
+    text-transform: uppercase;
+  }
+  .wrapper {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(15%, 1fr));
+    margin: 40px 0;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 20px;
+  }
+  @media screen and (max-width: 1280px) {
+    .content-wrapper {
+      grid-template-columns: repeat(3, minmax(30%, 1fr));
+    }
+  }
 </style>

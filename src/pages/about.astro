@@ -6,100 +6,107 @@ import ContactForm from "../components/Contact-form.astro";
 import fetchData from "../api";
 import Image from "../components/Image.astro";
 
-const apiUrl = import.meta.env.ABOUT_PHOTOS_API_URL ;
-const {imageInfoArray,aboutText} = await fetchData(apiUrl,0)
-
+const apiUrl = import.meta.env.ABOUT_PHOTOS_API_URL;
+const { imageInfoArray, aboutText } = await fetchData(apiUrl, 0);
 ---
 
-<Layout title="O nama | Foto studio Zenit" description="Upoznajte Foto studio Zenit kroz našu priču i tim. Sa strašću za fotografiju i posvećenošću kvalitetu, nudimo vrhunske usluge koje će vaše trenutke pretvoriti u trajne uspomene. Otkrijte više o našem timu i poslovanju." 
-keywords="Foto studio Zenit,O nama,Tim,Fotografi,Fotografske usluge,Kvalitet fotografija,Profesionalna fotografija,Fotografisanje,Posvećenost kvalitetu,Uspomene,fotografisanje venčanja, fotografisanje rodjendana, fotografisanje portreta, izrada foto albuma, izrada pozivnica">
-	<div class="content-wrapper">
-		<h1>O nama</h1>
+<Layout
+  title="O nama | Foto studio Zenit"
+  description="Upoznajte Foto studio Zenit kroz našu priču i tim. Sa strašću za fotografiju i posvećenošću kvalitetu, nudimo vrhunske usluge koje će vaše trenutke pretvoriti u trajne uspomene. Otkrijte više o našem timu i poslovanju."
+  keywords="Foto studio Zenit,O nama,Tim,Fotografi,Fotografske usluge,Kvalitet fotografija,Profesionalna fotografija,Fotografisanje,Posvećenost kvalitetu,Uspomene,fotografisanje venčanja, fotografisanje rodjendana, fotografisanje portreta, izrada foto albuma, izrada pozivnica"
+>
+  <div class="content-wrapper">
+    <h1>O nama</h1>
 
-		<p>
-			{aboutText}
-		</p>
-	</div>
-	<div class="photos">
-		{
-			imageInfoArray.map((img:any) => 
-
-				{return <Image imgUrl={img.imageUrl} imgAlt={img.imageAlt} width="250px" height="auto" />}
-			)
-		}
-	</div>
-	
+    <p>
+      {aboutText}
+    </p>
+  </div>
+  <div class="photos">
+    {
+      imageInfoArray.map((img: any) => {
+        return (
+          <Image
+            imgUrl={img.imageUrl}
+            imgAlt={img.imageAlt}
+            width="250px"
+            height="auto"
+          />
+        );
+      })
+    }
+  </div>
 </Layout>
 <style>
-	h1{
-		text-transform: uppercase;
-		text-align: center;
-		position: relative;
-	}
-	.photos {
-		display: flex;
-		min-width: 100%;
-		align-items: center;
-		overflow: auto;
-		padding: 20px;
-		gap: 20px;
-		margin: 20px 0;
-	}
-	@media screen and (max-width: 1280px) {
-		.photos {
-			scrollbar-width: none;
-		}
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+  }
+  .photos {
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+    overflow: auto;
+    padding: 20px;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  @media screen and (max-width: 1280px) {
+    .photos {
+      scrollbar-width: none;
+    }
 
-		.photos::-webkit-scrollbar {
-			display: none;
-		}
-	}
-	.content-wrapper {
-		margin-top: 100px;
-		margin-bottom: 40px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		padding: 20px;
-		font-weight: 400;
-		color: rgb(255 255 255 /80%);
-		background-image: url("/main-galery-section/about-bg.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		background-attachment: fixed;
-		position: relative;
-		height: calc(100vh - 100px);
-	}
-	@media screen and (max-width: 1280px) {
-		.content-wrapper {
-			margin-bottom: 0;
-		}
-	}
-	.content-wrapper::before {
-		content: "";
-		position: absolute;
-		top: -1px;
-		bottom: -1px;
-		left: 0;
-		right: 0;
-		background: #000000bc;
-	}
+    .photos::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .content-wrapper {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    font-weight: 400;
+    color: rgb(255 255 255 /80%);
+    background-image: url("/main-galery-section/about-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    height: calc(100vh - 100px);
+  }
+  @media screen and (max-width: 1280px) {
+    .content-wrapper {
+      margin-bottom: 0;
+    }
+  }
+  .content-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    background: #000000bc;
+  }
 
-	h2 {
-		color: #d9ad5e;
-		text-transform: uppercase;
-		text-align: center;
-		position: relative;
-	}
-	
-	p {
-		width: 100%;
-		max-width: 1280px;
-		position: relative;
-	}
-	.colored {
-		color: #d9ad5e;
-	}
+  h2 {
+    color: #d9ad5e;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+  }
+
+  p {
+    width: 100%;
+    max-width: 1280px;
+    position: relative;
+  }
+  .colored {
+    color: #d9ad5e;
+  }
 </style>

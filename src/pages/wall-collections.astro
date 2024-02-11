@@ -11,106 +11,120 @@ const apiUrl = import.meta.env.WALL_PHOTOS_API_URL;
 const { imageInfoArray } = await fetchData(apiUrl, 0);
 ---
 
-<Layout title="Zidne kolekcije | Foto studio Zenit" 
-description="Uživajte u našim zidnim kolekcijama - Foto studio Zenit pruža jedinstveno vizuelno iskustvo. Svaka slika je pažljivo odabrana da bi obogatila vaš prostor. Pejzaži, apstrakcije i portreti koji donose karakter i dušu u vaš dom. Pogledajte našu galeriju i pronađite savršenu fotografiju za vas." 
-keywords="Zidne kolekcije,Foto studio Zenit,Galerija zidnih fotografija,Umetnost za dom,Pejzažne fotografijeApstraktne fotografije,Portretna fotografija,Vizuelno iskustvo,Ukrasni zidovi,Fotografije za enterijer,Portreti,Venčanja">
-	<div class="wrapper">
-		<div class="heading-wrapper">
-			<h1>ZIDNE KOLEKCIJE</h1>
-			<p>Dozvolite nam da vas vodimo kroz vizuelno putovanje kroz našu galeriju, gde svaka fotografija postaje deo vašeg svakodnevnog života.Naša kolekcija zidnih fotografija donosi umetnost u vaš dom. Svaki kadar je pažljivo odabran kako bi stvorio harmoniju, bilo da je u pitanju pejzaž, apstrakt, ili portret. Ove fotografije ne samo da ukrašavaju vaš zid, već dodaju dušu i karakter svakom prostoru.</p>
-		</div>
-		<div class="content-wrapper" id="photoGrid">
-			{
-				imageInfoArray.map((img: any) => (
-					<div class="photo" style={`grid-row: ${img.aspectRatio === 'portrait' ? 'span 2' : 'span 1'}`}>
-						<Image imgUrl={img.imageUrl} imgAlt={img.imageAlt} width="100%" height="auto" />
-					</div>
-				))
-			}
-		</div>
-	</div>
-	
-	
+<Layout
+  title="Zidne kolekcije | Foto studio Zenit"
+  description="Uživajte u našim zidnim kolekcijama - Foto studio Zenit pruža jedinstveno vizuelno iskustvo. Svaka slika je pažljivo odabrana da bi obogatila vaš prostor. Pejzaži, apstrakcije i portreti koji donose karakter i dušu u vaš dom. Pogledajte našu galeriju i pronađite savršenu fotografiju za vas."
+  keywords="Zidne kolekcije,Foto studio Zenit,Galerija zidnih fotografija,Umetnost za dom,Pejzažne fotografijeApstraktne fotografije,Portretna fotografija,Vizuelno iskustvo,Ukrasni zidovi,Fotografije za enterijer,Portreti,Venčanja"
+>
+  <div class="wrapper">
+    <div class="heading-wrapper">
+      <h1>ZIDNE KOLEKCIJE</h1>
+      <p>
+        Dozvolite nam da vas vodimo kroz vizuelno putovanje kroz našu galeriju,
+        gde svaka fotografija postaje deo vašeg svakodnevnog života.Naša
+        kolekcija zidnih fotografija donosi umetnost u vaš dom. Svaki kadar je
+        pažljivo odabran kako bi stvorio harmoniju, bilo da je u pitanju pejzaž,
+        apstrakt, ili portret. Ove fotografije ne samo da ukrašavaju vaš zid,
+        već dodaju dušu i karakter svakom prostoru.
+      </p>
+    </div>
+    <div class="content-wrapper" id="photoGrid">
+      {
+        imageInfoArray.map((img: any) => (
+          <div
+            class="photo"
+            style={`grid-row: ${img.aspectRatio === "portrait" ? "span 2" : "span 1"}`}
+          >
+            <Image
+              imgUrl={img.imageUrl}
+              imgAlt={img.imageAlt}
+              width="100%"
+              height="auto"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </Layout>
 <style>
-	.heading-wrapper{
-		text-align: center;
-		background-image: url('/main-galery-section/wall-bg.png');
-		background-repeat: no-repeat;
-		background-size: cover;		
-		background-position:center;
-		background-attachment: fixed;
-		position: relative;
-		width: 100%;
-		padding:100px 20px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		height: calc(100vh - 300px);
-	}
-	
-	.heading-wrapper::before{
-		position: absolute;
-		content: '';
-		top: -1px;
-		right: 0;
-		bottom: -1px;
-		left: 0;
-		background:  #000000d5 ;
+  .heading-wrapper {
+    text-align: center;
+    background-image: url("/main-galery-section/wall-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 300px);
+  }
 
-	}
-	.heading-wrapper h1,.heading-wrapper p{
-		position: relative;
-	}
+  .heading-wrapper::before {
+    position: absolute;
+    content: "";
+    top: -1px;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    background: #000000d5;
+  }
+  .heading-wrapper h1,
+  .heading-wrapper p {
+    position: relative;
+  }
 
-	.heading-wrapper p{
-		max-width: 1280px;
-		text-align: center;
-		color: rgb(255 255 255 /80%);
-
-	}
-	h2 {
-		color: #d9ad5e;
-	}
-	.active {
-		color: #d9ad5e;
-	}
-	.nav {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		place-items: baseline;
-		text-align: center;
-	}
-	@media screen and (max-width: 1280px) {
-		.nav {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-	.nav div {
-		padding: 20px;
-		text-transform: uppercase;
-	}
-	.wrapper {
-		margin-top: 100px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.content-wrapper {
-		width: 100%;
-		max-width: 1280px;
-		display: grid;
-		grid-template-columns: repeat(4, minmax(20%, 1fr));
-		margin: 40px 0;
-		column-gap: 5px;
-		row-gap: 5px;
-		padding: 20px;
-	}
-	@media screen and (max-width: 1280px) {
-		.content-wrapper {
-			grid-template-columns: repeat(3, minmax(30%, 1fr));
-		}
-	}
+  .heading-wrapper p {
+    max-width: 1280px;
+    text-align: center;
+    color: rgb(255 255 255 /80%);
+  }
+  h2 {
+    color: #d9ad5e;
+  }
+  .active {
+    color: #d9ad5e;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: baseline;
+    text-align: center;
+  }
+  @media screen and (max-width: 1280px) {
+    .nav {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .nav div {
+    padding: 20px;
+    text-transform: uppercase;
+  }
+  .wrapper {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(20%, 1fr));
+    margin: 40px 0;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 20px;
+  }
+  @media screen and (max-width: 1280px) {
+    .content-wrapper {
+      grid-template-columns: repeat(3, minmax(30%, 1fr));
+    }
+  }
 </style>

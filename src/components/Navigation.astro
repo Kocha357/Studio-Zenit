@@ -3,348 +3,346 @@
 ---
 
 <nav id="navbar">
-	<img id="logo" src="/Logos/Zlatan-sa-slovima.png" alt="Foto studio Zenit full logo" />
-	<div class="links-wrapper">
-		<a href="/" class="active">Početna</a>
-		<a href="/about">O nama</a>
-		<a href="/services">Usluge</a>
-		<details>
-			<summary id="gallery">Galerija</summary>
-			<div class="links">
-				<a href="/gallery/weddings">VENČANJA</a>
-				<a href="/gallery/18-birthday">18.ROĐENDANI</a>
-				<a href="/gallery/1-birthday">1.ROĐENDANI</a>
-				<a href="/gallery/portraits">PORTRETI</a>
-			</div>
-		</details>
-		<details>
-			<summary id="albums">Albumi</summary>
-			<div class="links">
-				<a href="/albums/weddings">VENČANJA</a>
-				<a href="/albums/18-birthday">18.ROĐENDANI</a>
-				<a href="/albums/1-birthday">1.ROĐENDANI</a>
-				<a href="/albums/portraits">PORTRETI</a>
-			</div>
-		</details>
-		<a href="/wall-collections">ZIDNE KOLEKCIJE</a>
+  <img
+    id="logo"
+    src="/Logos/Zlatan-sa-slovima.png"
+    alt="Foto studio Zenit full logo"
+  />
+  <div class="links-wrapper">
+    <a href="/" class="active">Početna</a>
+    <a href="/about">O nama</a>
+    <a href="/services">Usluge</a>
+    <details>
+      <summary id="gallery">Galerija</summary>
+      <div class="links">
+        <a href="/gallery/weddings">VENČANJA</a>
+        <a href="/gallery/18-birthday">18.ROĐENDANI</a>
+        <a href="/gallery/1-birthday">1.ROĐENDANI</a>
+        <a href="/gallery/portraits">PORTRETI</a>
+      </div>
+    </details>
+    <details>
+      <summary id="albums">Albumi</summary>
+      <div class="links">
+        <a href="/albums/weddings">VENČANJA</a>
+        <a href="/albums/18-birthday">18.ROĐENDANI</a>
+        <a href="/albums/1-birthday">1.ROĐENDANI</a>
+        <a href="/albums/portraits">PORTRETI</a>
+      </div>
+    </details>
+    <a href="/wall-collections">ZIDNE KOLEKCIJE</a>
 
-		<a href="/contacts">Kontakt</a>
-	</div>
-	<div class="hamburger" id="hamburger">
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-	<div id="side-menu">
+    <a href="/contacts">Kontakt</a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div id="side-menu">
+    <a href="/" id="from-top" class="active">Početna</a>
+    <a href="/about">O nama</a>
+    <a href="/services">Usluge</a>
+    <details>
+      <summary id="gallery-mobile">Galerija</summary>
+      <div class="links">
+        <a href="/gallery/weddings">VENČANJA</a>
+        <a href="/gallery/18-birthday">18.ROĐENDANI</a>
+        <a href="/gallery/1-birthday">1.ROĐENDANI</a>
+        <a href="/gallery/portraits">PORTRETI</a>
+      </div>
+    </details>
+    <details>
+      <summary id="albums-mobile">Albumi</summary>
+      <div class="links">
+        <a href="/albums/weddings">VENČANJA</a>
+        <a href="/albums/18-birthday">18.ROĐENDANI</a>
+        <a href="/albums/1-birthday">1.ROĐENDANI</a>
+        <a href="/albums/portraits">PORTRETI</a>
+      </div>
+    </details>
+    <a href="/wall-collections">ZIDNE KOLEKCIJE</a>
 
-		<a href="/" id="from-top" class="active">Početna</a>
-		<a href="/about">O nama</a>
-		<a href="/services">Usluge</a>
-		<details>
-			<summary id="gallery-mobile">Galerija</summary>
-			<div class="links">
-				<a href="/gallery/weddings">VENČANJA</a>
-				<a href="/gallery/18-birthday">18.ROĐENDANI</a>
-				<a href="/gallery/1-birthday">1.ROĐENDANI</a>
-				<a href="/gallery/portraits">PORTRETI</a>
-			</div>
-		</details>
-		<details>
-			<summary id="albums-mobile">Albumi</summary>
-			<div class="links">
-				<a href="/albums/weddings">VENČANJA</a>
-				<a href="/albums/18-birthday">18.ROĐENDANI</a>
-				<a href="/albums/1-birthday">1.ROĐENDANI</a>
-				<a href="/albums/portraits">PORTRETI</a>
-			</div>
-		</details>
-		<a href="/wall-collections">ZIDNE KOLEKCIJE</a>
-
-		<a href="/contacts">Kontakt</a>
-		<div id="close">+</div>
-		<img class="logo-aside" src="/Logos/zlatan-bez-slova.png" alt="Foto studio Zenit full logo" />
-
-	</div>
+    <a href="/contacts">Kontakt</a>
+    <div id="close">+</div>
+    <img
+      class="logo-aside"
+      src="/Logos/zlatan-bez-slova.png"
+      alt="Foto studio Zenit full logo"
+    />
+  </div>
 </nav>
 <style>
-	
-	nav {
-		height: 100px;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		width: 100%;
-		position: fixed;
-		top: 0;
-		z-index: 99999;
-	}
-	.hamburger {
-		width: 50px;
-		height: 100%;
-		margin: 5px 20px;
-		display: none;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		gap: 10px;
-	}
-	.hamburger div {
-		width: 100%;
-		height: 5px;
-		background-color: #d9ad5e;
-	}
-	#side-menu {
-		position: fixed;
-		top: 0;
-		right: -100%;
-		bottom: 0;
-		height: 100vh;
-		z-index: 99999;
-		background: linear-gradient(to bottom, #121315, #000000 50%, #121315 100%);
-		display: none;
-		align-items: center;
-		flex-direction: column;
-		width: 80%;
-		overflow-y: auto;
-		overflow-x: hidden;
-	}
-	@media screen and (max-width: 1280px) {
-		#side-menu {
-			display: flex;
-		}
-		.hamburger {
-			display: flex;
-		}
-	}
-	.logo-aside {
-		width: 400px;
-		
-	}
-	#close {
-		transform: rotate(45deg);
-		color: rgb(255 255 255 / 58%);
-		font-size: 50px;
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		border-radius: 100%;
-		border: 1px solid #d9ad5e;
-		width: 50px;
-		height: 50px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-family: sans-serif;
-	}
-	.show-aside {
-		right: 0 !important;
-		transition: right 0.5s ease-out;
-	}
-	#logo {
-		width: 110px;
-		position: absolute;
-		left: 20px;
-		display: none;
-	}
-	@media screen and (max-width: 1280px) {
-		#logo {
-			left: -6px;
-		}
-	}
-	.show-img {
-		display: block !important;
-		transition: display 0.5s ease-out;
-	}
-	.scrolled {
+  nav {
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+  }
+  .hamburger {
+    width: 50px;
+    height: 100%;
+    margin: 5px 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hamburger div {
+    width: 100%;
+    height: 5px;
+    background-color: #d9ad5e;
+  }
+  #side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    height: 100vh;
+    z-index: 99999;
+    background: linear-gradient(to bottom, #121315, #000000 50%, #121315 100%);
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  @media screen and (max-width: 1280px) {
+    #side-menu {
+      display: flex;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+  .logo-aside {
+    width: 400px;
+  }
+  #close {
+    transform: rotate(45deg);
+    color: rgb(255 255 255 / 58%);
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 100%;
+    border: 1px solid #d9ad5e;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+  }
+  .show-aside {
+    right: 0 !important;
+    transition: right 0.5s ease-out;
+  }
+  #logo {
+    width: 110px;
+    position: absolute;
+    left: 20px;
+    display: none;
+  }
+  @media screen and (max-width: 1280px) {
+    #logo {
+      left: -6px;
+    }
+  }
+  .show-img {
+    display: block !important;
+    transition: display 0.5s ease-out;
+  }
+  .scrolled {
     background: linear-gradient(to left, #000000, #000000 30%, #121315 100%);
     height: 60px;
-    transition: background-color 1s ease-out, height 0.5s ease-out; /* Combine multiple transitions */
-}
+    transition:
+      background-color 1s ease-out,
+      height 0.5s ease-out; /* Combine multiple transitions */
+  }
 
-	.links-wrapper {
-		padding: 0 40px;
-		display: flex;
-		gap: 40px;
-	}
-	@media screen and (max-width: 1280px) {
-		.links-wrapper {
-			padding: 0 20px;
-			display: none;
-		}
-	}
-	.links-wrapper summary{
-		text-decoration: none;
-		outline: none;
-		color: rgb(255 255 255 / 58%);
-		font-size: 20px;
-		text-transform: uppercase;
-		cursor: pointer;
-		word-break: keep-all;
-		white-space: nowrap;
-	}
-	.links-wrapper details .links{
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		position: absolute;
-		background: linear-gradient(to left, #121315, #121315 10%, #000000 100%);
-		border-radius: 8px;
-		margin-top: 20px;
-		border: 1px solid #d9ad5e;
+  .links-wrapper {
+    padding: 0 40px;
+    display: flex;
+    gap: 40px;
+  }
+  @media screen and (max-width: 1280px) {
+    .links-wrapper {
+      padding: 0 20px;
+      display: none;
+    }
+  }
+  .links-wrapper summary {
+    text-decoration: none;
+    outline: none;
+    color: rgb(255 255 255 / 58%);
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+  .links-wrapper details .links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    background: linear-gradient(to left, #121315, #121315 10%, #000000 100%);
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #d9ad5e;
+  }
+  details summary:hover {
+    color: #d9ad5e;
+  }
 
-	}
-	details summary:hover{
-		color:#d9ad5e ;
-	}
-	
-	
-	details .links a{
-		font-size: 14px;
-		padding: 10px;
-	}
-	.links-wrapper a {
-		text-decoration: none;
-		outline: none;
-		color: rgb(255 255 255 / 58%);
-		font-size: 20px;
-		text-transform: uppercase;
-		cursor: pointer;
-		word-break: keep-all;
-		white-space: nowrap;
-		text-align: center;
-	}
-	#side-menu a {
-		text-decoration: none;
-		outline: none;
-		color: rgb(255 255 255 / 58%);
-		font-size: 20px;
-		text-transform: uppercase;
-		cursor: pointer;
-		word-break: keep-all;
-		white-space: nowrap;
-		margin-top: 20px;
-		text-align: center;
-	}
+  details .links a {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .links-wrapper a {
+    text-decoration: none;
+    outline: none;
+    color: rgb(255 255 255 / 58%);
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-align: center;
+  }
+  #side-menu a {
+    text-decoration: none;
+    outline: none;
+    color: rgb(255 255 255 / 58%);
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    word-break: keep-all;
+    white-space: nowrap;
+    margin-top: 20px;
+    text-align: center;
+  }
 
-	#side-menu .links{
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		border-radius: 8px;
-		border: 1px solid #d9ad5e;
-		margin-top: 20px;
-
-	}
-	#side-menu summary{
-		text-decoration: none;
-		outline: none;
-		color: rgb(255 255 255 / 58%);
-		font-size: 20px;
-		text-transform: uppercase;
-		cursor: pointer;
-		word-break: keep-all;
-		white-space: nowrap;
-		text-align: center;
-		margin-top: 20px;
-	}
-	#from-top {
-		margin-top: 50px !important;
-	}
-	.links-wrapper a:hover {
-		color: #d9ad5e;
-	}
-	#side-menu a.active {
-		color: #d9ad5e;
-	}
-	.links-wrapper a.active {
-		color: #d9ad5e;
-	}
-	.links-wrapper details summary.active{
-		color: #d9ad5e;
-	}
-	#side-menu details summary.active{
-		color: #d9ad5e;
-	}
-	details summary:focus{
-		color: #d9ad5e;
-
-	
-	}
-	summary{
-		outline:none;
-	}
-	details{
-		outline: none;
-	}
-	
+  #side-menu .links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid #d9ad5e;
+    margin-top: 20px;
+  }
+  #side-menu summary {
+    text-decoration: none;
+    outline: none;
+    color: rgb(255 255 255 / 58%);
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 20px;
+  }
+  #from-top {
+    margin-top: 50px !important;
+  }
+  .links-wrapper a:hover {
+    color: #d9ad5e;
+  }
+  #side-menu a.active {
+    color: #d9ad5e;
+  }
+  .links-wrapper a.active {
+    color: #d9ad5e;
+  }
+  .links-wrapper details summary.active {
+    color: #d9ad5e;
+  }
+  #side-menu details summary.active {
+    color: #d9ad5e;
+  }
+  details summary:focus {
+    color: #d9ad5e;
+  }
+  summary {
+    outline: none;
+  }
+  details {
+    outline: none;
+  }
 </style>
 <script>
-	window.onload = ()=>{
-		let navbar: any = document.getElementById('navbar');
-		if(window.scrollY > 5){
-			navbar.classList.add("scrolled")
-		}
-	}
-	window.onscroll = () => {
-		let navbar: any = document.getElementById("navbar");
+  window.onload = () => {
+    let navbar: any = document.getElementById("navbar");
+    if (window.scrollY > 5) {
+      navbar.classList.add("scrolled");
+    }
+  };
+  window.onscroll = () => {
+    let navbar: any = document.getElementById("navbar");
 
-		let navBarLogo: any = document.getElementById("logo");
-		if (window.scrollY > 5) {
-			navbar.classList.add("scrolled");
-			navBarLogo.classList.add("show-img");
-		} else {
-			navbar.classList.remove("scrolled");
-			navBarLogo.classList.remove("show-img");
-		}
-	};
+    let navBarLogo: any = document.getElementById("logo");
+    if (window.scrollY > 5) {
+      navbar.classList.add("scrolled");
+      navBarLogo.classList.add("show-img");
+    } else {
+      navbar.classList.remove("scrolled");
+      navBarLogo.classList.remove("show-img");
+    }
+  };
 
-	document.addEventListener("DOMContentLoaded", () => {
-		let currentPage = window.location.pathname;
-		let navLinks = document.querySelectorAll("#side-menu a");
-		let navLinksDesktop = document.querySelectorAll(".links-wrapper a");
-		let gallery:any = document.getElementById('gallery');
-		let albums:any = document.getElementById('albums')
-		let galleryMobile:any = document.getElementById('gallery-mobile');
-		let albumsMobile:any = document.getElementById('albums-mobile')
-		navLinks.forEach((link) => {
-			if (link.getAttribute("href") === currentPage) {
-				link.classList.add("active");
-			}else {
-				link.classList.remove("active");
-				
-			}
-		});
-		if(currentPage.includes('gallery')){
-				gallery.classList.add("active");
-				galleryMobile.classList.add('active')
-			} else if(currentPage.includes('albums')){
-				albums.classList.add("active");
-				albumsMobile.classList.add('active')
-			}else{
-				gallery.classList.remove("active");
-				galleryMobile.classList.remove('active');
-				albums.classList.remove('active')
-				albumsMobile.classList.remove('active')
+  document.addEventListener("DOMContentLoaded", () => {
+    let currentPage = window.location.pathname;
+    let navLinks = document.querySelectorAll("#side-menu a");
+    let navLinksDesktop = document.querySelectorAll(".links-wrapper a");
+    let gallery: any = document.getElementById("gallery");
+    let albums: any = document.getElementById("albums");
+    let galleryMobile: any = document.getElementById("gallery-mobile");
+    let albumsMobile: any = document.getElementById("albums-mobile");
+    navLinks.forEach((link) => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+    if (currentPage.includes("gallery")) {
+      gallery.classList.add("active");
+      galleryMobile.classList.add("active");
+    } else if (currentPage.includes("albums")) {
+      albums.classList.add("active");
+      albumsMobile.classList.add("active");
+    } else {
+      gallery.classList.remove("active");
+      galleryMobile.classList.remove("active");
+      albums.classList.remove("active");
+      albumsMobile.classList.remove("active");
+    }
+    navLinksDesktop.forEach((link) => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
 
-			}
-		navLinksDesktop.forEach((link) => {
-			if (link.getAttribute("href") === currentPage) {
-				link.classList.add("active");
-			} else {
-				link.classList.remove("active");
-			}
-		});
-	});
-
-	const hamburger: any = document.getElementById("hamburger");
-	const closeBtn: any = document.getElementById("close");
-	const aside: any = document.getElementById("side-menu");
-	hamburger.addEventListener("click", () => {
-		aside.classList.add("show-aside");
-		document.body.classList.add("disable-scroll");
-	});
-	closeBtn.addEventListener("click", () => {
-		aside.classList.remove("show-aside");
-		document.body.classList.remove("disable-scroll");
-	});
+  const hamburger: any = document.getElementById("hamburger");
+  const closeBtn: any = document.getElementById("close");
+  const aside: any = document.getElementById("side-menu");
+  hamburger.addEventListener("click", () => {
+    aside.classList.add("show-aside");
+    document.body.classList.add("disable-scroll");
+  });
+  closeBtn.addEventListener("click", () => {
+    aside.classList.remove("show-aside");
+    document.body.classList.remove("disable-scroll");
+  });
 </script>

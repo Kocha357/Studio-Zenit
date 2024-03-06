@@ -78,6 +78,11 @@ const { imageInfoArray, aboutText } = await fetchData(apiUrl, 0);
     background-attachment: fixed;
     position: relative;
   }
+  @media screen and (min-width: 1281px){
+    .content-wrapper{
+      height: calc(100vh - 300px);
+    }
+  }
   @media screen and (max-width: 1280px) {
     .content-wrapper {
       margin-bottom: 0;
